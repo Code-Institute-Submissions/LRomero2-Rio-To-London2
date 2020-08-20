@@ -113,10 +113,37 @@ animation: animate 3s linear infinite;}
 .navbar-nav.navbar-center {
     position: absolute;
     left: 50%;
-    transform: translatex(-50%);
-}
+    transform: translatex(-50%);}
 
 
 .nav-link{font-size: 24px;
     color: white;
 font-family: 'Carter One', cursive;}
+
+
+
+.container {
+  background-color: rgb(236, 133, 48);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  align-content: center;}
+
+.row {
+   padding: 1px;}
+
+.col-2 {
+     background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  margin:2%;
+  font-size: 24px;
+  padding:3%;
+  text-align: center;
+  box-shadow: 10px 10px 5px black;
+  height: 180px;
+  width:200px;
+  font-family: 'Carter One', cursive;
+  text-shadow: 2px 2px 3px  rgb(167, 163, 163);}
+
+
+
+
