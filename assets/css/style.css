@@ -7,19 +7,19 @@
 body {margin: 0;
       padding: 0;} 
 
-h2 {color: rgb(42, 19, 175);
-    text-shadow: 2px 2px 8px rgb(255, 255, 255);
+h2 {color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 8px rgb(19, 18, 18);
     text-align: center;
     font-family: 'Carter One', cursive;
     font-size: 70px;
     padding: 10%;}
 
-.col-sm {background-color: rgb(122, 200, 236);
+.col-sm {background-color: rgb(165, 161, 161);
 padding:10%;
 margin-top: 15%;
 height:500px;
 text-align: center;
-border:3px solid rgb(250, 253, 253);
+border:3px solid rgb(255, 255, 255);
 }
 
 .container-fluid{max-width: 40%;}
@@ -41,64 +41,68 @@ border:3px solid rgb(250, 253, 253);
     width:100%;
     height:100%;
     overflow:hidden;
-    background:linear-gradient(180deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);}
+    background:radial-gradient( circle, transparent 30%, black 150%), orange;;}
+
+
+
 
 .box div{ position: absolute; 
 width: 60px;
 height:60px;
 background-color: transparent;
-border: 4px solid rgb(234, 251, 255);}
+border: 4px solid rgb(234, 251, 255);
+animation: animate 1000ms linear infinite;}
 
 .box div:nth-child(1){
 top:12%;
 left:42%;
-animation: animate 8s linear infinite;}
+animation: animate 1100ms linear infinite;}
 
 
 .box div:nth-child(2){
 top:70%;
 left:50%;
-animation: animate 5s linear infinite;}
+animation: animate 1300ms linear infinite;}
 
 .box div:nth-child(3){
 top:17%;
 left:6%;
-animation: animate 7s linear infinite;}
+animation: animate 1200ms linear infinite;}
 
 .box div:nth-child(4){
 top:20%;
 left:60%;
-animation: animate 8s linear infinite;}
+animation: animate 1100ms linear infinite;}
 
 .box div:nth-child(5){
 top:67%;
 left:10%;
-animation: animate 4s linear infinite;}
+animation: animate 1000ms linear infinite;}
 
 .box div:nth-child(6){
 top:80%;
 left:70%;
-animation: animate 10s linear infinite;}
+animation: animate 1300ms linear infinite;}
 
 .box div:nth-child(7){
 top:60%;
 left:80%;
-animation: animate 13s linear infinite;}
+animation: animate 1200ms linear infinite;}
 
 .box div:nth-child(8){
 top:32%;
 left:25%;
-animation: animate 14s linear infinite;}
+animation: animate 1100ms linear infinite;}
 
 .box div:nth-child(9){
 top:90%;
 left:25%;
-animation: animate 7s linear infinite;}
+animation: animate 1000ms linear infinite;}
 
 .box div:nth-child(10){
 top:20%;
 left:80%;
-animation: animate 3s linear infinite;}
+animation: animate 800ms linear infinite;}
 
 @keyframes animate{
     0%{transform:scale(0) translateY(0) rotate(0);
@@ -165,7 +169,7 @@ body {
 
 
 .memory-cards:active {
-  transform: scale(0.97);
+  /*transform: scale(0.97);*/
   transition: transform .2s;}
 
 
@@ -173,7 +177,9 @@ body {
   transform: rotateY(180deg);}
 
 
-
+.front-face {
+    transform: rotateY(180deg);
+}
 
 
 
