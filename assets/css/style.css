@@ -135,7 +135,7 @@ font-family: 'Carter One', cursive;}
 body {
   height: 80vh;
   display: flex;
-  background: rgb(74, 168, 231);}
+  background:radial-gradient( circle, transparent 30%, rgb(0, 143, 43) 150%), rgb(255, 252, 74);}                                                                              
 
 
 .card-deck {
@@ -153,7 +153,7 @@ body {
   height: calc(33.333% - 20px);
   margin: 5px;
   position: relative;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.219);
+  box-shadow: 5px 5px 5px rgba(75, 75, 75, 0.774);
    transform-style: preserve-3d;
    transition: transform .5s;}
 
