@@ -114,6 +114,25 @@ animation: animate 800ms linear infinite;}
     
     }
 
+.bg{
+position: relative;
+background:  url(../imgs/brasil-travel-icons-set_96318-1139.jpg);
+height: 10vh;
+background-size: cover;
+background-position: 0 0;
+background-repeat: repeat-x;
+animation: animate 15s linear infinite;
+}
+
+@keyframes animate{
+
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100% 0;
+    }
+}
 
 
 .sidenav {
