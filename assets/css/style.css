@@ -7,13 +7,40 @@
 body {margin: 0;
       padding: 0;} 
 
-h2 {color: rgb(255, 255, 255);
-    text-shadow: 3px 3px 8px rgb(19, 18, 18);
+h2 {
+    margin: 0;
+    padding:0;
+    top:50%;
+    width:100%;
     text-align: center;
+    color: rgb(255, 255, 255);
     font-family: 'Carter One', cursive;
-    font-size: 70px;
-    padding: 10%;}
+    font-size: 5em;
+    position: absolute; 
+    transform: translateY(-50%);
+    letter-spacing: 0.2em;}
 
+h2 span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;}
+
+    @keyframes animate{
+        0%{
+            opacity:0;
+            transform: rotateY(90deg);
+            filter: blur(10px);
+
+        }
+         100%{
+            opacity:1;
+             transform: rotateY(0deg);
+             filter: blur(0);
+        }
+    }
+
+
+/*
 .col-sm {background-color: rgb(165, 161, 161);
 padding:10%;
 margin-top: 15%;
@@ -23,14 +50,7 @@ border:3px solid rgb(255, 255, 255);
 }
 
 .container-fluid{max-width: 40%;}
-
-
-@import "effects/2d-transitions/buzz";
-@if $includeClasses {
-	.#{$nameSpace}- {
-	    @include buzz();
-	}
-}
+*/
 
 
 
@@ -113,6 +133,7 @@ animation: animate 800ms linear infinite;}
     }
     
     }
+
 
 .bg{
 position: relative;
