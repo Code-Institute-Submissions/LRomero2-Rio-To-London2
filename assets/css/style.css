@@ -130,6 +130,7 @@ animation: animate 15s linear infinite;
   background: rgba(22, 21, 21, 0.541);
   overflow-x: hidden;
   padding: 8px 0;
+  font-family: 'Carter One', cursive;
 }
 
 .sidenav a {
