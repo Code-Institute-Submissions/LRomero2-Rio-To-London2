@@ -89,7 +89,7 @@ animation-delay: 4s;}
   /*height: 300px;
   padding-top: 120px;
   box-sizing: border-box;*/
-  -webkit-animation: slide 20s linear infinite;
+  -webkit-animation: slide 25s linear infinite;
 }
 
 
@@ -127,7 +127,7 @@ animation: animate 15s linear infinite;
   z-index: 1;
   top: 20px;
   left: 10px;
-  background: rgba(22, 21, 21, 0.493);
+  background: rgba(22, 21, 21, 0.541);
   overflow-x: hidden;
   padding: 8px 0;
 }
@@ -136,12 +136,41 @@ animation: animate 15s linear infinite;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: orange;
+  color: white;
   display: block;
 }
 
 .sidenav a:hover {
-  color: white;
+  color: rgba(255, 251, 21, 0.945);
+}
+
+.hvr-underline-from-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 251, 21, 0.945);
+  height: 4px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-right:hover:before, .hvr-underline-from-right:focus:before, .hvr-underline-from-right:active:before {
+  left: 0;
 }
 
 .main {
