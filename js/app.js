@@ -179,3 +179,9 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+
+var timer = select ('#timer');
+timer.html ('timer goes here');
+
+
