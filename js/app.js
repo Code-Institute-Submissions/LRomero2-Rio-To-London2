@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.memory-cards');
-//Used idea from marina-ferreira on Github for the matching logic and disabled card after matches//
+//Used idea from marina-ferreira on Github for the matching logic and disabled card after matches and shuffle cards.//
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
