@@ -239,14 +239,7 @@ animation: animate 15s linear infinite;
 
 
 
-/*
-body {
-  font-family: sans-serif;
-  display: grid;
-  height: 100vh;
-  place-items: center;
-}
-*/
+
 
 .clock{
     background: rgba(22, 21, 21, 0.541);
