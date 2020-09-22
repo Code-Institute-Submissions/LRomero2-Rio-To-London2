@@ -1,66 +1,70 @@
-
 const cards = document.querySelectorAll('.memory-cards');
+//Used idea from marina-ferreira on Github for the matching logic and disabled card after matches//
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
 function flipCard() {
-  this.classList.toggle('flip');
+  if (lockBoard) return;
+  if (this === firstCard) return;
+
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    // first click
+    hasFlippedCard = true;
+    firstCard = this;
+
+    return;
+  }
+
+  // second click
+  secondCard = this;
+
+  checkForMatch();
 }
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-  const cards = document.querySelectorAll('.memory-card');
-
-//Used the template from free code camp to build the matching logic
-
- let hasFlippedCard = false;
- let firstCard, secondCard;
-
-  function flipCard() {
-   this.classList.add('flip');
-
-   if (!hasFlippedCard) {
-     hasFlippedCard = true;
-     firstCard = this;
-   }
-  }
-
-    return;
-   }
-
-   secondCard = this;
-   hasFlippedCard = false;
-
-   checkForMatch();
- }
-
- function checkForMatch() {
-   if (firstCard.dataset.framework === secondCard.dataset.framework) {
-     disableCards();
-     return;
-   }
-
-   unflipCards();
- }
-
- function disableCards() {
-   firstCard.removeEventListener('click', flipCard);
-   secondCard.removeEventListener('click', flipCard);
- }
-
- function unflipCards() {
-   setTimeout(() => {
-     firstCard.classList.remove('flip');
-     secondCard.classList.remove('flip');
-   }, 1500);
- }
-
-  cards.forEach(card => card.addEventListener('click', flipCard));
 
 
-
-
-
-
-//Used the template from CSS Tricks to make the clock 
+//Used the template from CSS Tricks to make the clock //
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
