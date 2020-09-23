@@ -239,64 +239,20 @@ animation: animate 15s linear infinite;
 
 
 
+#timer {
+    margin-top: 0%;
+    padding-top:0;
+    margin-left:47%;
+    position: absolute;
+    font-family:  'Carter One', cursive;
+    font-size: 20px;
+    background: rgba(22, 21, 21, 0.541);}
 
-
-.clock{
-    background: rgba(22, 21, 21, 0.541);
-    height: 200px;
-    width: 200px; 
-
-}
-
-.base-timer {
-  position: relative;
-  width: 180px;
-  height: 180px;
-}
-
-.base-timer__svg {
-  transform: scaleX(-1);
-}
-
-.base-timer__circle {
-  fill: none;
-  stroke: none;
-}
-
-.base-timer__path-elapsed {
-  stroke-width: 7px;
-  stroke: #777777;
-}
-
-.base-timer__path-remaining {
-  stroke-width: 7px;
-  stroke-linecap: round;
-  transform: rotate(90deg);
-  transform-origin: center;
-  transition: 1s linear all;
-  fill-rule: nonzero;
-  stroke: currentColor;
-}
-
-.base-timer__path-remaining.green {
-  color: rgb(65, 184, 131);
-}
-
-.base-timer__path-remaining.orange {
-  color: orange;
-}
-
-.base-timer__path-remaining.red {
-  color: red;
-}
-
-.base-timer__label {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
-}
+#start-button {
+    margin-top: 0%;
+    padding-top:0;
+    margin-left:50%;
+    position: absolute;
+    font-family:  'Carter One', cursive;
+    font-size: 20px;
+    background: rgba(22, 21, 21, 0.541);}
