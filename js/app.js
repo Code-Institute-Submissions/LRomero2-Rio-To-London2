@@ -65,7 +65,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 //Used the template from CSS Tricks to make the clock //
-
+/*
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -178,10 +178,28 @@ function setCircleDasharray() {
   document
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
+}*/
+
+document.addEventListener('DOMContentLoaded', () => {
+
+const timeLeftDisplay = document.querySelector('#time-left')
+const startBtn = document.querySelector('#start-button')
+let timeLeft = 60
+
+function countDown(){
+    setInterval(function() {
+
+if(timeLeft <=0 ) {
+    clearInterval(timeLeft = 0)
+}
+
+        timeLeftDisplay.innerHTML = timeLeft 
+        timeLeft -=1
+    }, 1000)
 }
 
 
-var timer = select ('#timer');
-timer.html ('timer goes here');
+startBtn.addEventListener('click', countDown)
 
+})
 
