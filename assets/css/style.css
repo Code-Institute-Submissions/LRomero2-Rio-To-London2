@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
-@import "options";
-@import "mixins";
-@import "hacks";
+
 
 
 body {margin: 0;
@@ -108,40 +106,9 @@ animation-delay: 7.5s;}
   height: 10vh;
   background-size: cover;
   background-position: 0 0;}
-  /*text-align: center;
-  /*height: 300px;
-  padding-top: 120px;
-  box-sizing: border-box;*/
-  /*-webkit-animation: slide 25s linear infinite;
-}
+ 
 
 
-
-@-webkit-keyframes slide {
-    from { background-position: 0 0; }
-    to { background-position: -800px 0; }
-}
-/*
-.bg{
-position: relative;
-background:  url(../imgs/agustin-diaz-7F65HDP0-E0-unsplash.jpg);
-height: 10vh;
-background-size: cover;
-background-position: 0 0;
-background-repeat: repeat-x;
-animation: animate 15s linear infinite;
-}
-
-@keyframes animate{
-
-    from{
-        background-position: 0 0;
-    }
-    to{
-        background-position: 100% 0;
-    }
-}
-*/
 
 
 .sidenav {
@@ -198,8 +165,8 @@ animation: animate 15s linear infinite;
 }
 
 .main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 140px; 
+  font-size: 28px; 
   padding: 0px 10px;
 }
 
