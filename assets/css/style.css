@@ -19,6 +19,8 @@ body {margin: 0;
     bottom:25%;
     left:45%;}
 
+
+/*Imitated from Pure CSS Text Reveal From Smoke Animation Effect | CSS Animation Tutorial. h2 and h2 span:nth-child*/
 h2 {
     margin: 0;
     padding:0;
@@ -99,6 +101,8 @@ h2 span:nth-child(15) {
 animation-delay: 7.5s;}
 
 
+
+
 .bg{ 
   background:  url(../imgs/agustin-diaz-7F65HDP0-E0-unsplash.jpg) no-repeat 0 0;
   width: 100%;
@@ -107,9 +111,6 @@ animation-delay: 7.5s;}
   background-size: cover;
   background-position: 0 0;}
  
-
-
-
 
 .sidenav {
   width: 130px;
@@ -123,6 +124,7 @@ animation-delay: 7.5s;}
   font-family: 'Carter One', cursive;
 }
 
+/*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -131,6 +133,7 @@ animation-delay: 7.5s;}
   display: block;
 }
 
+/*From hover.css for hover effect on sidenav*/
 .sidenav a:hover {
   color: rgba(255, 251, 21, 0.945);
 }
@@ -164,6 +167,8 @@ animation-delay: 7.5s;}
   left: 0;
 }
 
+
+/*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
 .main {
   margin-left: 140px; 
   font-size: 28px; 

@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.memory-cards');
-//Used idea from marina-ferreira on Github for the matching logic and disabled card after matches and shuffle cards.//
+//Imitated from freecodecamp.org Memory Game in Vanilla JavaScript//
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -64,7 +64,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 
-
+//Copied from youtube video Build your own COUNTDOWN TIMER in 15 lines of JavaScript code, Ania Kubów #JavaScriptGames//
 document.addEventListener('DOMContentLoaded', () => {
 
 const timeLeftDisplay = document.querySelector('#time-left')
