@@ -1,14 +1,14 @@
-#**Rio to London Memory Game**
+# Rio to London Memory Game 
 I created this memory game to not just be a game for the memory but to help learn a basic sentence in Portuguese at the same time. This game can be expanded to learn thousands of sentences just by playing this simple game. I arranged the cards with nice photos as well as words to make it look more attractive and added a countdown timer that can be started when the player is ready. 
-##UX
+## UX
 This game is for those who would like to learn basic words and sentences in Portuguese with ease. Many people find it difficult or boring to learn a language but this game is designed to make it fun and easy to learn. I have created one page at the moment for one whole sentence to be learned. This is plenty for a beginner so I didn't make any other pages for now. This game is very simple so that the user can focus on learning the words. There is a countdown an optional timer made by using javascript for those who have learnt the words and want to use the game for memory, or for those who don’t want to use the timer can first take their time learning the words and the pictures. 
  User wanting to use the project as a memory game can simply open the page, click the ‘Let’s Go’ button on the welcome page and start straight away. When they have completed the game they can return to the welcome page or simply click the restart button. 
 Here is the Wireframe sketch for my project idea. 
-ENTER WIREFRAME HERE————————![Image of Wireframe]()
+![Image of Wireframe](assets/wireframes/wireframe-for-second-project.png)
 As a user type, I want to perform an action, so that I can achieve a goal.
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
-##Features
-###Existing Features
+## Features
+### Existing Features
 Countdown timer—This allows the user to practice getting faster at the game and to see their own progress. 
 Restart button—This allows the user to start the game again quickly without reloading the whole site and going back to the welcome page.
 Pictures on Cards—This helps the memory of the user to remember the words they have learnt for a long term memory. 
@@ -18,11 +18,11 @@ I would like to implement in the future a feature to display the words in the co
 Technologies Used
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 Javascript
-*The project uses Javascript to implement the card turning effect, shuffle and card matching effect. This was used to be able to intelligently restart the game so the user could play again,  match the correct cards together and flip them back over when they are not matched cards. It also shuffles the cards so that they user can play the game again without already knowing where the matched cards are. 
+* The project uses Javascript to implement the card turning effect, shuffle and card matching effect. This was used to be able to intelligently restart the game so the user could play again,  match the correct cards together and flip them back over when they are not matched cards. It also shuffles the cards so that they user can play the game again without already knowing where the matched cards are. 
          The project also uses Javascript for the countdown timer. I used the idea from a youtube tutorial video to construct the countdown timer and I referred to         
          a free code camp page to make the cards flip, shuffle and match.
          CSS
-*The project uses CSS to style the welcome page, game page, buttons, navbar, cards and titles. 
+* The project uses CSS to style the welcome page, game page, buttons, navbar, cards and titles. 
 
          HTML
 *And of course the project uses html to write the actual code. 
