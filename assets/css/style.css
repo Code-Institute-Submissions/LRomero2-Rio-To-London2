@@ -6,7 +6,7 @@ body {margin: 0;
       padding: 0;} 
 
 .welcome{
-    background-image: url('../imgs/ben-ostrower-7Tg4oySg9-I-unsplash.jpg');
+    background-image: url('../imgs/welcomepagebackground.jpg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;}
@@ -104,7 +104,7 @@ animation-delay: 7.5s;}
 
 
 .bg{ 
-  background:  url(../imgs/agustin-diaz-7F65HDP0-E0-unsplash.jpg) no-repeat 0 0;
+  background:  url('../imgs/gamepagebackground.jpg') no-repeat 0 0;
   width: 100%;
   margin: 0;
   height: 10vh;
