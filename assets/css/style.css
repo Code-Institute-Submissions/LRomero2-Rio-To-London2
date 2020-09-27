@@ -138,6 +138,14 @@ animation-delay: 7.5s;}
   color: rgba(255, 251, 21, 0.945);
 }
 
+@media screen and (max-width: 414px) {
+  .sidenav a {
+    float: none;
+    width: 100%;
+  }
+}/*---------------------------------------------------------------------------*/
+
+
 .hvr-underline-from-right {
   display: inline-block;
   vertical-align: middle;
@@ -197,6 +205,16 @@ animation-delay: 7.5s;}
   flex-wrap: wrap;
   margin-top: 5%;
   perspective: 1000px;}
+
+
+@media screen and (max-width: 410px) {
+  .memory-cards {
+    width: 80px;
+    height: 40px;
+    display:flex;
+  }
+}
+
 
 
 .memory-cards {
