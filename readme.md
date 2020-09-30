@@ -32,9 +32,9 @@ I also used a gitignore file to put old files in that I didn't want to use.
 ## Images 
 The project also uses images for backgrounds and card photos, both the front and back of the cards use images. Here are some photos of the welcome page and the game page.  
 
-![Image of Wireframe](assets/imgs/screenshotwelcomepage.jpg)
+![Image of Screenshot](assets/imgs/screenshotwelcomepage.jpg)
 
-![Image of Wireframe](assets/imgs/screenshotofgamepagelaptop.jpg)
+![Image of Screenshot](assets/imgs/screenshotofgamepagelaptop.jpg)
 
 # Testing
 I have tested my code using the HTML and CSS Validators and have discovered no problems. 
