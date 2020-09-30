@@ -107,17 +107,21 @@ animation-delay: 7.5s;}
   background:  url('../imgs/gamepagebackground.jpg') no-repeat 0 0;
   width: 100%;
   margin: 0;
-  height: 10vh;
+  height: 100%;
   background-size: cover;
   background-position: 0 0;}
  
+@media screen and (max-height: 450px) {
+  .bg{background-size: cover;}
+}
+
 
 .sidenav {
-  width: 130px;
+  width: 110px;
   position: fixed;
   z-index: 1;
-  top: 220px;
-  left: 25px;
+  top: 2%;
+  left: 52%;
   background: rgba(22, 21, 21, 0.541);
   overflow-x: hidden;
   padding: 8px 0;
@@ -128,7 +132,7 @@ animation-delay: 7.5s;}
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 18px;
   color: white;
   display: block;
 }
@@ -189,38 +193,32 @@ animation-delay: 7.5s;}
 }
 
 
-
+/*
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;}
-
+*/
 
 
 .card-deck {
-  width: 940px;
-  height: 640px;
+  width: 900px;
+  height: 600px;
+  box-sizing: border-box;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 5%;
-  perspective: 1000px;}
-
-
-@media screen and (max-width: 410px) {
-  .memory-cards {
-    width: 80px;
-    height: 40px;
-    display:flex;
-  }
-}
+  padding: 0;
+ /* flex-wrap: wrap;*/
+  margin-top: 8%;
+  /*perspective: 1000px;*/}
 
 
 
 .memory-cards {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 20px);
-  margin: 5px;
+  /*width: calc(25% - 10px);
+  height: calc(33.333% - 20px);*/
+  height: 180px;
+  width: 200px;
+  margin: 5%;
   position: relative;
   box-shadow: 5px 5px 5px rgba(75, 75, 75, 0.774);
    transform-style: preserve-3d;
@@ -253,9 +251,8 @@ animation-delay: 7.5s;}
 
 
 #timer {
-    padding:1%;
-    margin-top: 0%;
-    margin-left:4%;
+    top:7%;
+    left:42%;
     position: absolute;
     font-family:  'Carter One', cursive;
     font-size: 20px;
@@ -266,14 +263,13 @@ animation-delay: 7.5s;}
      
 
 #start-button {
-    padding:1%;
-    margin-top: 4%;
-    margin-left:3%;
+    top:6%;
+    left:36%;
     position: absolute;
     font-family:  'Carter One', cursive;
     font-size: 20px;
     background: rgba(22, 21, 21, 0.541);
-     color: #53ff1f;}
+    color: #53ff1f;}
 
 
 
