@@ -57,12 +57,8 @@ If a user wants to improve the time they can complete the game, they can:
 I have tested the project thoroughly on a laptop and it looks good and works well. It is still playable on a mobile device and tablet however I would like to improve the appearance of the game on a mobile device in the future. 
 
 # Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+To deploy my project I will push my latest code to GitHub by using the standard method of code: git commit, then git push. Then I will go to my account on GitHub. When I have logged in I will go to my repositories and select the memory-game project. Then I will select the settings tab, scroll down until the GitHub pages section and select the master branch I want to deploy. Then I will click save.
+
 # Credits
 ### Content
 The text for sections I have imitated or copied are clearly marked within my code. Here is a list of the other resources I used to complete my project. 
