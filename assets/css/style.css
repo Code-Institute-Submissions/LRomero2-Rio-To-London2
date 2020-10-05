@@ -201,7 +201,7 @@ animation-delay: 7.5s;}
 */
 
 
-.card-deck {
+.row {
   width: 900px;
   height: 600px;
   box-sizing: border-box;
