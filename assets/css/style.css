@@ -111,8 +111,11 @@ animation-delay: 7.5s;}
   background-size: cover;
   background-position: 0 0;}
  
-@media screen and (max-height: 450px) {
-  .bg{background-size: cover;}
+
+@media only screen and (max-width: 450px){
+.bg
+{background-size: stretch;
+}
 }
 
 
@@ -214,7 +217,8 @@ animation-delay: 7.5s;}
   grid-gap: 10px;}
 
 @media only screen and (max-width: 450px) {
- .card-deck{width: 500px;
+ .card-deck{
+  width: 500px;
   height: 200px;
   margin:auto;
   justify-content: space-between;
@@ -227,8 +231,6 @@ animation-delay: 7.5s;}
 
 
 .memory-cards {
-  /*width: calc(25% - 10px);
-  height: calc(33.333% - 20px);*/
   height: 180px;
   width: 200px;
   margin: 5%;
@@ -237,6 +239,14 @@ animation-delay: 7.5s;}
    transform-style: preserve-3d;
    transition: transform .5s;}
 
+@media only screen and (max-width: 450px){
+.memory-cards 
+{height: 80px;
+width: 100px;
+margin-top: 80%;
+justify-content: space-between;
+}
+}
 
 .front-face,
 .back-face {
@@ -271,6 +281,11 @@ animation-delay: 7.5s;}
     background: rgba(22, 21, 21, 0.541);
     color: #53ff1f;}
 
+@media only screen and (max-width: 450px){
+#timer
+{left: 20%;
+}
+}
 
      
 
