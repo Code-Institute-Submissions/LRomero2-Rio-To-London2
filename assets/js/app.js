@@ -52,7 +52,7 @@ function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 }
-/*
+
 (function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
@@ -60,11 +60,11 @@ function resetBoard() {
     console.log(card.style.order);
   });
 })();
-*/
+
 	
 
-var cards = ["shop", "coffee", "I went", "to", "to the", "buy"];
-	  function shuffleCards(cardArray) {
+// var cards = ["shop", "coffee", "I went", "to", "to the", "buy"];
+	  /*function shuffleCards(cardArray) {
 	    let currentIndex = cardArray.length,
 	      temporaryValue,
 	      randomIndex;
@@ -83,7 +83,7 @@ var cards = ["shop", "coffee", "I went", "to", "to the", "buy"];
       
       shuffleCards(cards);
 
-    console.log(cards);
+    console.log(cards);*/
 
 
 

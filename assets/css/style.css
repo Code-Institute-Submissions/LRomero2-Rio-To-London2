@@ -201,16 +201,29 @@ animation-delay: 7.5s;}
 */
 
 
-.row {
+.card-deck {
   width: 900px;
   height: 600px;
-  box-sizing: border-box;
-  margin: auto;
+  margin:auto;
+  justify-content: space-between;
   padding: 0;
- /* flex-wrap: wrap;*/
+  display: grid;
   margin-top: 8%;
-  /*perspective: 1000px;*/}
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 200px 200px;
+  grid-gap: 10px;}
 
+@media only screen and (max-width: 450px) {
+ .card-deck{width: 500px;
+  height: 200px;
+  margin:auto;
+  justify-content: space-between;
+  padding: 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;}
+}
 
 
 .memory-cards {
@@ -236,7 +249,6 @@ animation-delay: 7.5s;}
 
 
 .memory-cards:active {
-  /*transform: scale(0.97);*/
   transition: transform .2s;}
 
 
