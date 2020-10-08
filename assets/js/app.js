@@ -63,29 +63,6 @@ function resetBoard() {
 
 	
 
-// var cards = ["shop", "coffee", "I went", "to", "to the", "buy"];
-	  /*function shuffleCards(cardArray) {
-	    let currentIndex = cardArray.length,
-	      temporaryValue,
-	      randomIndex;
-	
-
-	    while (0 !== currentIndex) {
-	      randomIndex = Math.floor(Math.random() * currentIndex);
-	      currentIndex -= 1;
-	
-
-	      temporaryValue = cardArray[currentIndex];
-	      cardArray[currentIndex] = cardArray[randomIndex];
-	      cardArray[randomIndex] = temporaryValue;
-	    }
-      };
-      
-      shuffleCards(cards);
-
-    console.log(cards);*/
-
-
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 

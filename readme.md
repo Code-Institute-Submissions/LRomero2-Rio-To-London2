@@ -40,7 +40,7 @@ The project also uses images for backgrounds and card photos, both the front and
 I have tested my code using the HTML and CSS Validators and have discovered no problems. 
 To test the HTML files I went to  https://validator.w3.org/#validate_by_input, entered the HTML code for both pages into the typing box, one by one. Then I clicked the run check button and it showed no errors. 
 To test the CSS I went to https://jigsaw.w3.org/css-validator/validator, entered the CSS code into the typing box and clicked the run check button.
-The code passed the validator test. I have also thoroughly tested the javascript code using jasmine. 
+The code passed the validator test. I have also thoroughly tested the javascript code using jasmine and a Javascript Validator https://esprima.org/demo/validate.html.
 I have also manually tested all components of the project. All of the pages and features are working well with no bugs or problems. 
 If a user wants to play the game to learn the words, they can:
 * Open the project page.
@@ -64,9 +64,9 @@ To deploy my project I will push my latest code to GitHub by using the standard 
 The text for sections I have imitated or copied are clearly marked within my code. Here is a list of the other resources I used to complete my project. 
 **Youtube:**
 Pure CSS Text Reveal From Smoke Animation Effect | CSS Animation Tutorial
-Build your own COUNTDOWN TIMER in 15 lines of JavaScript code, Ania Kubów #JavaScriptGames
+Build your own COUNTDOWN TIMER in 15 lines of JavaScript code, Ania Kubów #JavaScriptGames https://www.youtube.com/watch?v=vSV_Ml2_A88
 **Websites:**
-freecodecamp.org Memory Game in Vanilla JavaScript
+https://www.freecodecamp.org/news/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae/ Memory Game in Vanilla JavaScript
 ### Media
 The photos used in this site were obtained from Unsplash.com and Google images. 
 ## Acknowledgements
