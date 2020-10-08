@@ -11,6 +11,12 @@ body {margin: 0;
     width: 100%;
     background-repeat: no-repeat;}
 
+@media only screen and (max-width: 450px){
+.welcome
+{background: none;
+background-color: rgba(54, 116, 250, 0.699);
+}
+}
 
 .container{
     align-items: center;
@@ -18,6 +24,17 @@ body {margin: 0;
     justify-content: center;
     bottom:25%;
     left:45%;}
+
+    @media only screen and (max-width: 450px){
+.container
+{align-items: center;
+    position: absolute;
+    justify-content: center;
+    bottom: 50%;
+    left: 40%;
+
+}
+}
 
 
 /*Imitated from Pure CSS Text Reveal From Smoke Animation Effect | CSS Animation Tutorial. h2 and h2 span:nth-child*/
@@ -33,6 +50,24 @@ h2 {
     position: absolute; 
     transform: translateY(-50%);
     letter-spacing: 0.2em;}
+
+@media only screen and (max-width: 450px){
+h2
+{background: none;
+background-color: rgba(54, 116, 250, 0.699);
+margin: 0;
+    padding:0;
+    top:30%;
+    width:100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Carter One', cursive;
+    font-size: 3.6em;
+    position: absolute; 
+    transform: translateY(-50%);
+}
+}
+
 
 h2 span{
     opacity: 0;
@@ -114,7 +149,8 @@ animation-delay: 7.5s;}
 
 @media only screen and (max-width: 450px){
 .bg
-{background-size: stretch;
+{background: none;
+background-color: rgba(54, 116, 250, 0.699);
 }
 }
 
@@ -150,7 +186,7 @@ animation-delay: 7.5s;}
     float: none;
     width: 100%;
   }
-}/*---------------------------------------------------------------------------*/
+}
 
 
 .hvr-underline-from-right {
@@ -196,12 +232,6 @@ animation-delay: 7.5s;}
 }
 
 
-/*
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;}
-*/
 
 
 .card-deck {
