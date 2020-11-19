@@ -7,9 +7,11 @@ body {margin: 0;
 
 .welcome{
     background-image: url('../imgs/welcomepagebackground.jpg');
-    background-size: cover;
     width: 100%;
-    background-repeat: no-repeat;}
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;}
+
 
 @media only screen and (max-width: 450px){
 .welcome
