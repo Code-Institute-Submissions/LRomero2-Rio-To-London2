@@ -1,3 +1,18 @@
+
+function inputName(input_name) {
+	name = input_name;
+}
+
+function index(member) 
+{
+	for (var i = 0; i <16; i++) 
+	{
+		if(listy[i]==member)
+			return i;
+	}
+}
+
+
 const cards = document.querySelectorAll('.memory-cards');
 //Imitated from freecodecamp.org Memory Game in Vanilla JavaScript//
 let hasFlippedCard = false;
