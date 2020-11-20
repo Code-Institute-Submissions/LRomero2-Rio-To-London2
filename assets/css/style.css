@@ -345,6 +345,23 @@ background-color: rgba(54, 116, 250, 0.699);
 }
 
 
+
+
+.col {
+  z-index: 1;
+  top: 2%;
+  background: rgba(22, 21, 21, 0.541);
+  overflow-x: hidden;
+  font-family: 'Carter One', cursive;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 6px 8px 6px 16px;
+  top:2%;
+  left:0;
+}
+
+
 /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
 .main {
   margin-left: 140px; 
@@ -356,8 +373,6 @@ background-color: rgba(54, 116, 250, 0.699);
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-
 
 
 .card-deck {
