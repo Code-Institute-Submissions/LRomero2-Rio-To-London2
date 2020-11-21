@@ -384,7 +384,7 @@ height:10%;
   justify-content: space-between;
   padding: 0;
   display: grid;
-  margin-top: 8%;
+  margin-top: 3%;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 200px 200px;
   grid-gap: 10px;}
@@ -520,7 +520,7 @@ input {
 }
 
 
-.button{
+#start-button{
    font-family:  'Carter One', cursive;
    color: black;
    font-size: 20px; 
