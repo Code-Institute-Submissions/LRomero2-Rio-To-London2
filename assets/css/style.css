@@ -213,6 +213,7 @@ animation-delay: 7.5s;}
 .bg{ 
   background:  url('../imgs/gamepagebackground.jpg') no-repeat 0 0;
   width: 100%;
+  overflow: hidden;
   margin: 0;
   height: 100%;
   background-size: cover;
@@ -345,11 +346,15 @@ background-color: rgba(54, 116, 250, 0.699);
 }
 
 
-
+.container{
+    top:2%;
+    width:80%;
+    left:10%;
+    right: 10%;
+}
 
 .col {
   z-index: 1;
-  top: 2%;
   background: rgba(22, 21, 21, 0.541);
   overflow-x: hidden;
   font-family: 'Carter One', cursive;
