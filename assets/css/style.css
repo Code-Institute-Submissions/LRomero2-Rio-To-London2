@@ -213,7 +213,8 @@ animation-delay: 7.5s;}
 .bg{ 
   background:  url('../imgs/gamepagebackground.jpg') no-repeat 0 0;
   width: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
   margin: 0;
   height: 100%;
   background-size: cover;
@@ -282,39 +283,6 @@ background-color: rgba(54, 116, 250, 0.699);
 }
 
 
-.sidenav {
-  width: 110px;
-  position: fixed;
-  z-index: 1;
-  top: 2%;
-  left: 52%;
-  background: rgba(22, 21, 21, 0.541);
-  overflow-x: hidden;
-  padding: 8px 0;
-  font-family: 'Carter One', cursive;
-}
-
-/*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
-  display: block;
-}
-
-/*From hover.css for hover effect on sidenav*/
-.sidenav a:hover {
-  color: rgba(255, 251, 21, 0.945);
-}
-
-@media screen and (max-width: 414px) {
-  .sidenav a {
-    float: none;
-    width: 100%;
-  }
-}
-
 
 .hvr-underline-from-right {
   display: inline-block;
@@ -346,12 +314,18 @@ background-color: rgba(54, 116, 250, 0.699);
 }
 
 
-.container{
+.container-fluid{
     top:2%;
     width:80%;
     left:10%;
     right: 10%;
+    }
+
+
+.row row-cols-4{
+height:10%;
 }
+
 
 .col {
   z-index: 1;
@@ -361,10 +335,33 @@ background-color: rgba(54, 116, 250, 0.699);
   text-decoration: none;
   font-size: 18px;
   color: white;
-  padding: 6px 8px 6px 16px;
+  /*padding: 6px 8px 6px 16px;*/
+  padding: 6px;
   top:2%;
-  left:0;
+  left:0;}
+ 
+ /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
+ .col a {
+  /*padding: 6px 8px 6px 16px;*/
+  padding: 6px;
+  text-decoration: none;
+  font-family: 'Carter One', cursive;
+  font-size: 18px;
+  color: white;
 }
+
+/*From hover.css for hover effect on navbar*/
+.col a:hover {
+  color: rgba(255, 251, 21, 0.945);
+}
+
+@media screen and (max-width: 414px) {
+  .col a {
+    float: none;
+    width: 100%;
+  }
+}
+
 
 
 /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
@@ -375,8 +372,8 @@ background-color: rgba(54, 116, 250, 0.699);
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .col {padding-top: 15px;}
+  .col a {font-size: 18px;}
 }
 
 
@@ -449,13 +446,13 @@ justify-content: space-between;
 
 
 #timer {
-    top:7%;
+    top:8%;
     left:42%;
     position: absolute;
     font-family:  'Carter One', cursive;
-    font-size: 20px;
+    font-size: 38px;
     background: rgba(22, 21, 21, 0.541);
-    color: #53ff1f;}
+    color: red;}
 
 @media only screen and (max-width: 450px){
 #timer
