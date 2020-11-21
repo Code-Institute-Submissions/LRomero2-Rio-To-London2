@@ -1,16 +1,25 @@
 
-function inputName(input_name) {
-	name = input_name;
-}
+//function inputName(input_name) {
+	//name = input_name;
+//}
 
-function index(member) 
-{
-	for (var i = 0; i <16; i++) 
-	{
-		if(listy[i]==member)
-			return i;
-	}
-}
+//function index(member) 
+//{
+	//for (var i = 0; i <16; i++) 
+	//{
+	//	if(listy[i]==member)
+		//	return i;
+	//}
+//}
+
+document.getElementById('button').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "flex";
+});
+
+document.querySelector('.close').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "none";
+});
+
 
 
 const cards = document.querySelectorAll('.memory-cards');
