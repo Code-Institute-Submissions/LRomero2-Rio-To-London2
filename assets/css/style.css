@@ -3,7 +3,8 @@
 
 
 body {margin: 0;
-      padding: 0;} 
+      padding: 0;
+      font-family:  'Carter One', cursive;} 
 
 .welcome{
     background-image: url('../imgs/welcomepagebackground.jpg');
@@ -211,7 +212,7 @@ animation-delay: 3s;}
 
 
 .bg{ 
-  background:  url('../imgs/gamepagebackground.jpg') no-repeat 0 0;
+  /*background:  url('../imgs/gamebackground4.jpg') no-repeat 0 0;*/
   width: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -342,7 +343,6 @@ height:10%;
  
  /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
  .col a {
-  /*padding: 6px 8px 6px 16px;*/
   padding: 6px;
   text-decoration: none;
   font-family: 'Carter One', cursive;
@@ -364,7 +364,7 @@ height:10%;
 
 
 
-/*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
+/*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*
 .main {
   margin-left: 140px; 
   font-size: 28px; 
@@ -459,7 +459,7 @@ justify-content: space-between;
 {left: 20%;
 }
 }
-
+*/
      
 /*
 #start-button {
@@ -532,3 +532,163 @@ input {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* Cards Animations by Animate.css: https://daneden.github.io/animate.css/*/
+
+/*
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+	font-family:  'Carter One', cursive;
+    width: 100%;
+	height: 100%
+    background: blue;}*/
+/*
+.deck {
+	width: 70%;
+	margin: 0 auto;
+	background-color:black;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 20px 20px 0 0 red;}*/
+	
+
+.deck {
+  width: 90%;
+  height: 70%;
+  margin:auto;
+  justify-content: space-between;
+  padding: 0;
+  display: grid;
+  margin-top: 3%;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 200px 200px;
+  grid-gap: 10px;}
+
+@media only screen and (max-width: 450px) {
+ .deck{
+  width: 500px;
+  height: 200px;
+  margin:auto;
+  justify-content: space-between;
+  padding: 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;}
+}
+
+
+
+	.card {
+		height: 180px;
+        width: 200px;
+		background-color:yellow;
+		display: inline-block;
+		margin: 0 15px 15px 0;
+		line-height: 140px;
+		font-size: 0;
+		color: #ffffff;
+		text-align: center;
+		border-radius: 8px;
+		vertical-align: top;
+		cursor: pointer;
+		transform: rotateY(180deg);
+		transform-style: preserve-3d;
+		transition: transform .3s ease;
+		font-family: FontAwesome;
+    }
+
+		&:nth-child(4n) {
+			margin: 0 0 15px 0;
+		}
+
+		&:nth-child(n+13) {
+			margin: 0 15px 0 0;
+
+			&:nth-child(4n) {
+				margin: 0;
+			}
+		}
+
+		&.open {
+			transform: rotateY(0);
+			background: $card_opend-background;
+			cursor: default;
+		}
+		&.show {
+			font-size: 33px;
+		}
+
+		&.match {
+			transform: rotateY(0);
+			cursor: default;
+			background: $card_match-background;
+			font-size: 33px;
+		}
+
+		&.notmatch {
+			background: $card_notmatch-background;
+		}
+	}
+}
+#score-panel {
+	text-align: center;
+	width: 80%;
+	margin: 10px;
+}
+	
+
+   /* 
+.card  {
+  height: 180px;
+  width: 200px;
+  margin: 5%;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(75, 75, 75, 0.774);
+   transform-style: preserve-3d;
+   transition: transform .5s;}
+
+@media only screen and (max-width: 450px){
+.card  
+{height: 80px;
+width: 100px;
+margin-top: 80%;
+justify-content: space-between;
+}
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  position: absolute;
+  border-radius: 2px;
+  backface-visibility: hidden;}
+
+
+.memory-cards:active {
+  transition: transform .2s;}
+
+
+.memory-cards.flip {
+  transform: rotateY(180deg);}
+
+
+.front-face {
+    transform: rotateY(180deg);
+}
+*/
