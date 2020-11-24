@@ -731,6 +731,7 @@ body {
 
 .container {
     height:50%;
+    width:80%;
 	justify-content: center;
 	align-items: center;
 }
@@ -762,7 +763,8 @@ h1 {
 	height: 3.7rem;
 	width: 3.7rem;
 	margin: 0.2rem 0.2rem;
-	background: #141214;;
+	background-image: url('../imgs/cardflag.jpg');
+    background-size: cover;
 	font-size: 0;
 	color: #ffffff;
 	border-radius: 5px;
