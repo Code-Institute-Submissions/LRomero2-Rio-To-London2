@@ -178,6 +178,7 @@ function moveCounter(){
         hour = 0;
         startTimer();
     }
+}/*
     // setting rates based on moves
     if (moves > 8 && moves < 12){
         for( i= 0; i < 3; i++){
@@ -193,7 +194,7 @@ function moveCounter(){
             }
         }
     }
-}
+}*/
 
 
 // @description game timer
