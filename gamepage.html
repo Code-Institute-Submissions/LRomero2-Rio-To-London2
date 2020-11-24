@@ -8,11 +8,11 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/1ef5aa7734.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
-<body class="bg">
+<body>
+<!----<body class="bg">------->
     
 <!------------------
 <div id="mySidenav" class="sidenav">
@@ -20,7 +20,7 @@
   <a href="gamepage.html" class="hvr-underline-from-right">Restart</a>
 </div>
 ------->
-
+<!------
 <div class=".container-fluid">
   <div class="row row-cols-4">
   <div class="col"><h3 id="timer"><span id="time-left">60</span></h3></div>
@@ -28,7 +28,7 @@
     <div class="col"><a href="gamepage.html" class="hvr-underline-from-right">Restart</a></div>
     <div id="score-panel"><span class="moves">0</span> Moves</div>
   </div>
-</div>
+</div> ---------------->
 
 <!---Copied from youtube video Build your own COUNTDOWN TIMER in 15 lines of JavaScript code, Ania Kubów #JavaScriptGames-->
 <!-------
@@ -37,9 +37,52 @@
 <button id="start-button">Start</button>
 </section>
 <div class="hvr-underline-from-right" id="score"></div>
-------------->
+------------
 
-<ul class="deck"></ul>
+<ul class="deck"></ul>--->
+
+
+    <div class="container">
+    <header>
+    <h1>Matching Game</h1>
+    <section class="score-panel">
+
+        <ul class="stars">
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    </ul>
+    
+        <span class="moves">0</span> Moves
+        <div class="restart">
+        RESTART
+    <i class="fa fa-repeat"></i>
+            </div>
+
+        <span class="timer">
+
+        00:00:00
+
+        </span>
+    </section>
+    </header>
+   <div class="modal">
+   <div class="modal-content">
+       <h2 class="modal-title">Congratulations !</h2>
+       <p class="modal-message">You won !</p>
+  <div class="modal-element">
+      <span>Time :</span>
+       </div>
+       <div class="modal-element">
+           <span>Moves :</span>
+       </div>
+       <div class="modal-element">
+           <span> Stars :</span> 
+        </div>
+       </div>
+    </div>
+   </div>
+
 
 <!---Imitated from freecodecamp.org Memory Game in Vanilla JavaScript---->
 <!-----<section class="card-deck">
@@ -101,7 +144,7 @@
 			inputName(name);
 		</script>
 --------->
-
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

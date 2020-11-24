@@ -132,142 +132,140 @@ startBtn.addEventListener('click', countDown)
 
 
 
-
-var symbols = ['bicycle', 'bicycle', 'leaf', 'leaf', 'cube', 'cube', 'anchor', 'anchor', 'paper-plane-o', 'paper-plane-o', 'bolt', 'bolt', 'bomb', 'bomb', 'diamond', 'diamond'],
-		opened = [],
-		match = 0,
-		moves = 0,
-		$deck = $('.deck'),
-		$scorePanel = $('#score-panel'),
-		$moveNum = $scorePanel.find('.moves'),
-		$ratingStars = $scorePanel.find('i'),
-		$restart = $scorePanel.find('.restart'),
-		delay = 800,
-		gameCardsQTY = symbols.length / 2,
-		rank3stars = gameCardsQTY + 2,
-		rank2stars = gameCardsQTY + 6,
-		rank1stars = gameCardsQTY + 10;
-
-// Shuffle function From http://stackoverflow.com/a/2450976
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-	
-  while (0 !== currentIndex) {
+ var Cards = ["fa fa-diamond","fa fa-paper-plane-o","fa fa-anchor","fa fa-bolt","fa fa-cube","fa fa-anchor","fa fa-leaf","fa fa-bicycle","fa fa-diamond","fa fa-bomb","fa fa-leaf","fa fa-bomb","fa fa-bolt","fa fa-bicycle","fa fa-paper-plane-o","fa fa-cube"];
+    // An empty array where values of open cards are pushed to compare.
+    var OpenCards= [];
+    //An empty array of cards where shuffled cards are stored.
+    var shuffleCards=[];
+    var tilesFlipped=0;
+    var numOfmoves=0;
+    // Function to shuffle an array of cards.
+    function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
     temporaryValue = array[currentIndex];
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
-
-// Initial Game
-function initGame() {
-	var cards = shuffle(symbols);
-  $deck.empty();
-  match = 0;
-  moves = 0;
-  $moveNum.html(moves);
-  $ratingStars.removeClass('fa-star-o').addClass('fa-star');
-	for (var i = 0; i < cards.length; i++) {
-		$deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'))
-	}
-};
-
-// Set Rating and final Score
-function setRating(moves) {
-	var rating = 3;
-	if (moves > rank3stars && moves < rank2stars) {
-		$ratingStars.eq(2).removeClass('fa-star').addClass('fa-star-o');
-		rating = 2;
-	} else if (moves > rank2stars && moves < rank1stars) {
-		$ratingStars.eq(1).removeClass('fa-star').addClass('fa-star-o');
-		rating = 1;
-	} else if (moves > rank1stars) {
-		$ratingStars.eq(0).removeClass('fa-star').addClass('fa-star-o');
-		rating = 0;
-	}	
-	return { score: rating };
-};
-
-// End Game
-function endGame(moves, score) {
-	swal({
-		allowEscapeKey: false,
-		allowOutsideClick: false,
-		title: 'Congratulations! You Won!',
-		text: 'With ' + moves + ' Moves and ' + score + ' Stars.\nBoom Shaka Lak!',
-		type: 'success',
-		confirmButtonColor: '#9BCB3C',
-		confirmButtonText: 'Play again!'
-	}).then(function(isConfirm) {
-		if (isConfirm) {
-			initGame();
-		}
-	})
-}
-
-// Restart Game
-$restart.on('click', function() {
-  swal({
-    allowEscapeKey: false,
-    allowOutsideClick: false,
-    title: 'Are you sure?',
-    text: "Your progress will be Lost!",
-    type: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#9BCB3C',
-    cancelButtonColor: '#EE0E51',
-    confirmButtonText: 'Yes, Restart Game!'
-  }).then(function(isConfirm) {
-    if (isConfirm) {
-      initGame();
     }
-  })
-});
-
-// Card flip
-$deck.on('click', '.card:not(".match, .open")', function() {
-	if($('.show').length > 1) { return true; }
-	
-	var $this = $(this),
-			card = $this.context.innerHTML;
-  $this.addClass('open show');
-	opened.push(card);
-
-	// Compare with opened card
-  if (opened.length > 1) {
-    if (card === opened[0]) {
-      $deck.find('.open').addClass('match animated infinite rubberBand');
-      setTimeout(function() {
-        $deck.find('.match').removeClass('open show animated infinite rubberBand');
-      }, delay);
-      match++;
-    } else {
-      $deck.find('.open').addClass('notmatch animated infinite wobble');
-			setTimeout(function() {
-				$deck.find('.open').removeClass('animated infinite wobble');
-			}, delay / 1.5);
-      setTimeout(function() {
-        $deck.find('.open').removeClass('open show notmatch animated infinite wobble');
-      }, delay);
+    return array;
     }
-    opened = [];
-		moves++;
-		setRating(moves);
-		$moveNum.html(moves);
-  }
-	
-	// End Game if match all cards
-	if (gameCardsQTY === match) {
-		setRating(moves);
-		var score = setRating(moves).score;
-		setTimeout(function() {
-			endGame(moves, score);
-		}, 500);
-  }
-});
+    // shuffle the cards array
+    shuffleCards = shuffle(Cards);
+    // Timer code start
+    var clearTime; 
+    var seconds = 0, minutes = 0, hours = 0;
+    var clearState; 
+    var secs, mins, gethours ; 
+    //Timer start function  
+    function startWatch( ) {
+    /* check if seconds is equal to 60 and add a +1 to minutes, and set seconds to 0 */ 
+    if ( seconds === 60 ) { seconds = 0; minutes = minutes + 1; }
+    /* you use the javascript tenary operator to format how the minutes should look and add 0 to minutes if less than 10 */ 
+    mins = ( minutes < 10 ) ? ( '0' + minutes + ': ' ) : ( minutes + ': ' );
+    /* check if minutes is equal to 60 and add a +1 to hours set minutes to 0 */ 
+    if ( minutes === 60 ) { minutes = 0; hours = hours + 1; }
+    /* you use the javascript tenary operator to format how the hours should look and add 0 to hours if less than 10 */
+    gethours = ( hours < 10 ) ? ( '0' + hours + ': ' ) : ( hours + ': ' );
+    secs = ( seconds < 10 ) ? ( '0' + seconds ) : ( seconds ); 
+    // display the stopwatch 
+    var time =gethours + mins + secs;
+    $('.container').find('.timer').html(time);
+    /* call the seconds counter after displaying the stop watch and increment seconds by +1 to keep it counting */
+    seconds++; 
+    /* call the setTimeout( ) to keep the timer alive ! */ 
+    clearTime = setTimeout( "startWatch( )", 1000 ); } 
+    // Function used to start the timer
+    function startTime( ) { 
+    /* check if seconds, minutes, and hours are equal to zero and start the timer*/ 
+    if ( seconds === 0 && minutes === 0 && hours === 0 ) {  
+    startWatch( );
+    } }
 
-initGame();
+// function to stop the time 
+    function stopTime( ) { 
+    /* check if seconds, minutes and hours are not equal to 0 */ 
+    if ( seconds !== 0 || minutes !== 0 || hours !== 0 ) { 
+    /* display the full time before reseting the stop watch */ 
+    var time = gethours + mins + secs;     
+    $('.container').find('.timer').html(time);
+    /*Add the time,moves and star rating to the congratulation modal only after game is complete*/
+    var StarsModalElem=$('.modal-element').eq(2);
+    var MovesModalElem=$('.modal-element').eq(1);
+    var TimerModalElem=$('.modal-element').eq(0);
+    $('.stars').clone().appendTo(StarsModalElem);
+    $('.moves').clone().appendTo(MovesModalElem);
+    $('.timer').clone().appendTo(TimerModalElem);
+    /* clear the stop watch using the setTimeout( ) return value 'clearTime' as ID */ 
+    clearTimeout( clearTime ); }}  
+    //Timer code end
+
+    // HTML elements creation for deck and cards
+    $('.container').append('<ul class="deck"></ul>');
+    for (var i = 0;i < Cards.length;i++) {
+    $('.deck').prepend('<li class="card"></li>'); 
+    }
+    $('.card').prepend('<i></i>');
+
+    for (var i = 0;i < Cards.length;i++) {
+    $('.card').eq(i).find('i').addClass(shuffleCards[i]);    
+    }
+
+    // Click event to restart the game
+    $('.restart').click(function(){
+    location.reload();
+    });
+
+    //Event listener for flipping the cards when clicked on 
+    $('.deck').on('click','.card',function (event) {
+    /*Start the timer when a card is clicked*/
+    startTime();
+    /*Essential condition for flipping a card i.e. a card may be flipped only if class='card' is present which is true always and only one other card is open.*/
+    if ($(this).attr('class')==='card' && OpenCards.length<2){
+    /*CLass name of a open card is pushed to opencards array when only one card is opened.*/
+    if (OpenCards.length===0) {
+    $(this).toggleClass('open');
+    OpenCards.push($(this).children().attr('class'));
+    }
+    /*If a card is open and next card is clicked */
+    else if (OpenCards.length===1) {
+    $(this).toggleClass('open');
+    OpenCards.push($(this).children().attr('class'));
+    /*Comparison of two open cards-If matched */
+    if (OpenCards[0]=== OpenCards[1]) {
+    $('.card').filter($('.open')).toggleClass('open match');
+    //Increment the number of tilees flipped and number of moves if a pair is made.
+    tilesFlipped=tilesFlipped + 2;
+    numOfmoves=numOfmoves+1;
+    $('.moves').text(numOfmoves);
+    //Empty the array for comparison of next two cards.
+    OpenCards= [];
+    }
+    else {
+    // To avoid flipping of more than two cards at a time and used to flip back cards that are not matching
+    function flipBack () {
+    $('.card').filter($('.open')).toggleClass('open');
+    OpenCards = [];
+    numOfmoves=numOfmoves+1;
+    $('.moves').text(numOfmoves);
+    }
+    setTimeout(flipBack, 600);
+    }
+    }
+    // Star rating
+    if (numOfmoves >16 && numOfmoves < 25) {
+    var star3 =$('.stars').find('li').eq(2);
+    star3.css('color','black');
+    }
+    if (numOfmoves > 25) {
+    var star2 =$('.stars').find('li').eq(1);
+    star2.css('color','black');
+    }
+    // After all tiles are matched reload the game
+    if (tilesFlipped === Cards.length) {
+    stopTime();
+    $('.modal').css('display','block');
+    }     
+    }
+    });
