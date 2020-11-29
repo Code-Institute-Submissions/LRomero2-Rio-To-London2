@@ -95,7 +95,7 @@ align-items: center;
 
 
 /*Popup box for instructions - Taken from - https://github.com/prithaupadhyay/Memory-Game*/
-.popup {
+.popup1 {
   margin: 70px auto;
   padding: 20px;
   background: #fff;
@@ -105,8 +105,19 @@ align-items: center;
   transition: all 5s ease-in-out;
 }
 
+@media only screen and (max-width: 1062px){
+.popup1{
+width: 80%;
+margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+}
 /*Popup box for instructions - Taken from - https://github.com/prithaupadhyay/Memory-Game*/
-.popup .content {
+.popup1 .content {
   max-height: 35%;
   overflow: auto;
 }
