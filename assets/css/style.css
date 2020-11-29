@@ -24,11 +24,11 @@ width: 200px;
 }
 }
 
-@media only screen and (max-width: 1140px){
+@media only screen and (max-width: 1062px){
 .welcome{
 background-image: url('../imgs/welcomepagebackground.jpg');
-width: 770px;
-  height: 800px;
+width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 }
@@ -53,13 +53,13 @@ width: 770px;
 }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1062px){
 .container1{
 align-items: center;
     position: absolute;
     justify-content: center;
     bottom: 20%;
-    left: 5%;
+    left: 25%;
 }
 }
 
@@ -83,13 +83,13 @@ align-items: center;
 }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1062px){
 .container2{
 align-items: center;
     position: absolute;
     justify-content: center;
     bottom: 20%;
-    left: 40%;
+    right: 20%;
 }
 }
 
@@ -156,8 +156,8 @@ h2 {
     transform: translateY(-50%);
     letter-spacing: 0.2em;}
 
-@media only screen and (max-width: 416px){
-h2
+@media only screen and (max-width: 414px){
+h2 
 {
 margin: 0;
     padding:0;
@@ -172,12 +172,12 @@ margin: 0;
 }
 }
 
-@media only screen and (max-width: 768px){
-h2{
+@media only screen and (max-width: 1062px){
+h2 {
 margin: 0;
     padding:0;
     top:60%;
-    width:70%;
+    width:100%;
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: 'Carter One', cursive;
