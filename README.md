@@ -26,6 +26,9 @@ The game looks best on a desktop or laptop.
 * Restart button — This allows the user to start the game again quickly.
 * Pictures on Cards — This helps the memory of the user to remember the words they have learnt for a long term recall of the words. 
 
+Here are a few photos of the pop up modal boxes built into the game.
+![Image of Screenshot](assets/imgs/levelmodalscreenshot.jpg)
+
 ### Features Left to Implement
 I would like to implement in the future a feature to display the words in the correct order of the sentence at the top of the page to show the whole sentence altogether. I would also like to add a voice feature that pronounces the words as they are clicked on.
 ## Technologies Used

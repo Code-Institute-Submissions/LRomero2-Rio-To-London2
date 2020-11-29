@@ -16,8 +16,12 @@ body {margin: 0;
 
 @media only screen and (max-width: 450px){
 .welcome
-{background: none;
-background-color: rgba(54, 116, 250, 0.699);
+{/*background: none;
+background-color: rgba(54, 116, 250, 0.699);*/
+background-image: url('../imgs/welcomepagebackground.jpg');
+width: 200px;
+  height: 800px;
+  object-fit: cover;
 }
 }
 
@@ -35,8 +39,8 @@ background-color: rgba(54, 116, 250, 0.699);
 {align-items: center;
     position: absolute;
     justify-content: center;
-    bottom: 50%;
-    left: 40%;
+    bottom: 20%;
+    left: 15%;
 
 }
 }
@@ -56,8 +60,8 @@ align-items: center;
 {align-items: center;
     position: absolute;
     justify-content: center;
-    bottom: 50%;
-    left: 50%;
+    bottom: 20%;
+    right: 15%;
 
 }
 }
@@ -126,16 +130,16 @@ h2 {
 
 @media only screen and (max-width: 450px){
 h2
-{background: none;
-background-color: rgba(54, 116, 250, 0.699);
+{/*background: none;
+background-color: rgba(54, 116, 250, 0.699);*/
 margin: 0;
     padding:0;
-    top:30%;
-    width:100%;
+    top:65%;
+    width:90%;
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: 'Carter One', cursive;
-    font-size: 3.6em;
+    font-size: 2.8em;
     position: absolute; 
     transform: translateY(-50%);
 }
