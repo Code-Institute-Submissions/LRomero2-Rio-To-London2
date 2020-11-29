@@ -1,203 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/sandstone/bootstrap.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rio to London</title>
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
-<body>
-<!----<body class="bg">------->
-    
-<!------------------
-<div id="mySidenav" class="sidenav">
-  <a href="index.html" class="hvr-underline-from-right">Home</a>
-  <a href="gamepage.html" class="hvr-underline-from-right">Restart</a>
-</div>
-------->
-<!------
-<div class=".container-fluid">
-  <div class="row row-cols-4">
-  <div class="col"><h3 id="timer"><span id="time-left">60</span></h3></div>
-    <div class="col"><a href="index.html" class="hvr-underline-from-right">Home</a></div>
-    <div class="col"><a href="gamepage.html" class="hvr-underline-from-right">Restart</a></div>
-    <div id="score-panel"><span class="moves">0</span> Moves</div>
-  </div>
-</div> ---------------->
 
-<!---Copied from youtube video Build your own COUNTDOWN TIMER in 15 lines of JavaScript code, Ania Kubów #JavaScriptGames-->
-<!-------
-<section>
-<h3 id="timer"><span id="time-left">60</span></h3>
-<button id="start-button">Start</button>
-</section>
-<div class="hvr-underline-from-right" id="score"></div>
-------------
+<body class="bg">
 
-<ul class="deck"></ul>--->
-
-
-    <div class="container">
-        <header>
-            <h1>Rio to London</h1>
-        </header>
-
-        <section class="score-panel">
-        	<!-----<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>------------>
-
-        	<span class="moves">0</span> Move(s)
-
-            <div class="timer">
+	<!-- Start pop up box -->
+	<div id="startModal" class="modal">
+		<div class="modal-content">
+			<h1 class="site-title start">Let's Fire Up The Brain!</h1>
+			<h3 class="choose start">Choose A Level</h3>
+			<button id="easy-level" class="level-button">Just Starting Out</button>
+			<button id="medium-level" class="level-button">...Getting There</button>
+			<button id="hard-level" class="level-button">Total Pro!</button>
+		</div>
+	</div>
+    <footer>
+		<!-- This is the timer clock to time the game -->
+		<div class="timer">
+			<h3 class="info">Time: <span class="clock data"></span></h3>
+		</div>
+        <!----------This will let the user go back to the home screen------->
+        <div class="home-button"><h3 class="info"><a href="index.html" class="hvr-underline-from-right">Home</a></h3></div>
+		<!--- This will show how many moves the player is using ------->
+		<div class="counter">
+			<h3 class="info">Moves: <span id="moves" class="data"></span></h3>
+		</div>
+	</footer>
+	
+		<!--- This is the card deck for the memor cards ---------->
+	<section id="game-board" class="board">
+	</section>
+	
+	<!-- This pop up box tells the user the time it took them to finish the game and gives them an option to restart the game----->
+	<div id="winModal" class="modal">
+		<div class="modal-content">
+			<div class="close" id="close-win">&times;</div>
+			<h2 class="congrats" id="blinking">Well Done!</h2>
+			<div class="modal-data"><h3 class="time-result">Your Time</h3><div class="clock data"></div>
             </div>
-<!-------
-            <div class="restart" onclick=startGame()>
-        		<i class="fa fa-repeat"></i>
-        	</div>----->
-        </section>
+			<div class="play-again">
+				<p class="win-text">Fancy another go?</p>
+				<button id="restart">Restart Game</button>
+			</div>
+		</div>
+	</div>
 
-        <ul class="deck" id="card-deck">
-            <li class="card" type="diamond">
-                <i class="fa fa-diamond"></i>Shop
-            </li>
-            <li class="card" type="plane">
-                <i class="fa fa-paper-plane-o"></i>Coffee
-            </li>
-            <li class="card match" type="anchor">
-                <i class="fa fa-anchor"></i>To
-            </li>
-            <li class="card" type="bolt" >
-                <i class="fa fa-bolt"></i>To The
-            </li>
-            <li class="card" type="cube">
-                <i class="fa fa-cube"></i>I Went
-            </li>
-            <li class="card match" type="anchor">
-                <i class="fa fa-anchor"></i>Para
-            </li>
-            <li class="card" type="leaf">
-                <i class="fa fa-leaf"></i>Today
-            </li>
-            <li class="card" type="bicycle">
-                <i class="fa fa-bicycle"></i>I'm Going
-            </li>
-            <li class="card" type="diamond">
-                <i class="fa fa-diamond"></i>Loja
-            </li>
-            <li class="card" type="bomb">
-                <i class="fa fa-bomb"></i>Buy
-            </li>
-            <li class="card" type="leaf">
-                <i class="fa fa-leaf"></i>Hoje
-            </li>
-            <li class="card" type="bomb">
-                <i class="fa fa-bomb"></i>Comprar
-            </li>
-            <li class="card open show" type="bolt">
-                <i class="fa fa-bolt"></i>Ao
-            </li>
-            <li class="card" type="bicycle">
-                <i class="fa fa-bicycle"></i>Estou Indo
-            </li>
-            <li class="card" type="plane">
-                <i class="fa fa-paper-plane-o"></i>Cafe
-            </li>
-            <li class="card" type="cube">
-                <i class="fa fa-cube"></i>Eu Fui
-            </li>
-        </ul>
-<!-------
-        <div id="popup1" class="overlay">
-            <div class="popup">
-                <h2>Congratulations 🎉</h2>
-                <a class="close" href=# >×</a>
-                <div class="content-1">
-                    Congratulations you're a winner 🎉🎉
-                </div>
-                <div class="content-2">
-                    <p>You made <span id=finalMove> </span> moves </p>
-                    <p>in <span id=totalTime> </span> </p>
-                    <p>Rating:  <span id=starRating></span></p>
-                </div>
-                <button id="play-again"onclick="playAgain()">
-                    Play again 😄</a>
-                </button>
-            </div>
-        </div>----------->
 
-    </div>
-    <script src="assets/js/app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="assets/data.js"></script>
+	<script src="assets/app.js"></script>
 </body>
 </html>
-
-
-<!---Imitated from freecodecamp.org Memory Game in Vanilla JavaScript---->
-<!-----<section class="card-deck">
-  <div class="memory-cards" data-framework="shop">
-      <img class="front-face" src="assets/imgs/englishshop.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-     </div>
-   <div class="memory-cards" data-framework="coffee">
-      <img class="front-face" src="assets/imgs/englishcoffee.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-    <div class="memory-cards" data-framework="i went">
-      <img class="front-face" src="assets/imgs/englishiwent.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-     <div class="memory-cards" data-framework="to">
-       <img class="front-face" src="assets/imgs/englishto.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-    </div>
-<div class="memory-cards" data-framework="to the">
-      <img class="front-face" src="assets/imgs/englishtothe.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-    <div class="memory-cards" data-framework="buy">
-      <img class="front-face" src="assets/imgs/englishbuy.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-    <div class="memory-cards" data-framework="buy">
-     <img class="front-face" src="assets/imgs/portuguesebuy.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-    <div class="memory-cards" data-framework="shop">
-      <img class="front-face" src="assets/imgs/portugueseshop.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-  <div class="memory-cards" data-framework="coffee">
-     <img class="front-face" src="assets/imgs/portuguesecoffee.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-    <div class="memory-cards" data-framework="to the">
-     <img class="front-face" src="assets/imgs/portuguesetothe.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
- </div>
-    <div class="memory-cards" data-framework="i went">
-     <img class="front-face" src="assets/imgs/portugueseiwent.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
-</div>
-     <div class="memory-cards" data-framework="to">
-     <img class="front-face" src="assets/imgs/portugueseto.jpg" alt="Memory Card">
-    <img class="back-face" src="assets/imgs/cardflag.jpg" alt="Memory Card">
- </div>
-</section>
-
----------->
-<!-------------
-<script type="text/javascript">
-			var name = prompt("Enter your name: ");
-			document.getElementById("score").innerHTML = name + "'s Score: 100";
-			inputName(name);
-		</script>
---------->
- 
