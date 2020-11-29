@@ -1,25 +1,38 @@
 # Rio to London Memory Game 
-I created this memory game to not just be a game for the memory but to help learn a basic sentence in Portuguese at the same time. This game can be expanded to learn thousands of sentences just by playing this simple game. I arranged the cards with nice photos as well as words to make it look more attractive and added a countdown timer that can be started when the player is ready. 
+I created this memory game to not just be a game for the memory but to help learn a basic sentence in Portuguese at the same time. This game can be expanded to learn thousands of sentences just by playing this simple game. 
+I arranged the cards with nice photos as well as words to make it look more attractive and added a countdown timer that can be started when the player is ready. 
+And a moves counter so that the player can see how many moves it took them to complete the game.
 # UX
-This game is for those who would like to learn basic words and sentences in Portuguese with ease. Many people find it difficult or boring to learn a language but this game is designed to make it fun and easy to learn. I have created one page at the moment for one whole sentence to be learned. This is plenty for a beginner so I didn't make any other pages for now. This game is very simple so that the user can focus on learning the words. There is an optional countdown timer made by using javascript for those who have learned the words and want to use the game for memory, or for those who don’t want to use the timer can first take their time learning the words and the pictures. 
-A User wanting to use the project as a memory game can simply open the page, click the ‘Let’s Go’ button on the welcome page and start straight away. When they have completed the game they can return to the welcome page or simply click the restart button. 
-Here is the Wireframe sketch for my project idea. This is the Wireframe for the project on desktop and tablet view. The game looks best on a desktop or laptop. 
+This game is for those who would like to learn basic words and sentences in Portuguese with ease. 
+Many people find it difficult or boring to learn a language but this game is designed to make it fun and easy to learn. 
+I have created three pages at the moment for one whole sentence to be learned. There is an easy, medum or difficult level. 
+Each page makes the sentence a little more complex to show how easy it is to learn a language.
+This is plenty for a beginner so I didn't make any other pages with different sentences for now. 
+This game is very simple so that the user can focus on learning the words. There is a timer made by using javascript 
+for those who want to see their progress in quickness playing the game.
+A User wanting to test the game can click on the instructions button to see how the game works. Then, they can simply 
+click the ‘Let’s Go’ button on the welcome page and start straight away. When they have completed the game they can restart the game to try and beat their lowest moves score last time or they can exit the game.
+Additionally they can return to the welcome page a try a different level.
+Here is the Wireframe sketch for my project idea. This is the Wireframe for the project on desktop and tablet view. 
+The game looks best on a desktop or laptop. 
 
 ![Image of Wireframe](assets/wireframes/wireframe-for-second-project.png)
 
 # Features
 ### Existing Features
-* Countdown timer — This allows the user to practice getting faster at the game and to see their own progress. 
-* Restart button — This allows the user to start the game again quickly without reloading the whole site and going back to the welcome page.
-* Pictures on Cards — This helps the memory of the user to remember the words they have learnt for a long term memory. 
+* Instruction box — This tells the user how to play the game and helps them to understand the idea behind the project.
+* Game Level Option — This allows the player to choose the difficulty level of the game.
+* Timer — This allows the user to practice getting faster at the game and to see their own progress. 
+* Restart button — This allows the user to start the game again quickly.
+* Pictures on Cards — This helps the memory of the user to remember the words they have learnt for a long term recall of the words. 
 
 ### Features Left to Implement
 I would like to implement in the future a feature to display the words in the correct order of the sentence at the top of the page to show the whole sentence altogether. I would also like to add a voice feature that pronounces the words as they are clicked on.
 ## Technologies Used
 
 ### Javascript
-* The project uses Javascript to implement the card turning effect, shuffle and card matching effect. This was used to be able to intelligently restart the game so the user could play again,  match the correct cards together and flip them back over when they are not matched cards. It also shuffles the cards so that they user can play the game again without already knowing where the matched cards are. 
-         The project also uses Javascript for the countdown timer. I used the idea from a youtube tutorial video to construct the countdown timer and I referred to a free code camp page to make the cards flip, shuffle and match.
+* The project uses Javascript to implement the shuffle and card matching effect. This was used to be able to intelligently restart the game so the user could play again,  match the correct cards together and flip them back over when they are not matched cards. It also shuffles the cards so that they user can play the game again without already knowing where the matched cards are. 
+         The project also uses Javascript for the timer. I referred to a free code camp page to make the cards flip, shuffle and match.
 
 ### CSS
 * The project uses CSS to style the welcome page, game page, buttons, navbar, cards and titles. 
@@ -32,7 +45,7 @@ I also used a gitignore file to put old files in that I didn't want to use.
 ## Images 
 The project also uses images for backgrounds and card photos, both the front and back of the cards use images. Here are some photos of the welcome page and the game page.  
 
-![Image of Screenshot](assets/imgs/screenshotwelcomepage.jpg)
+![Image of Screenshot](assets/imgs/SharedScreenshotnewwelcomepage.jpg)
 
 This was the original layout and design of the page.
 
@@ -54,14 +67,19 @@ I have also thoroughly tested the javascript code using jasmine and a Javascript
 ## Manual Testing
 I have also manually tested all components of the project. All of the pages and features are working well with no bugs or problems. 
 I have tested the project thoroughly on a laptop and it looks good and works well. It is still playable on a mobile device and tablet however I would like to improve the appearance of the game on a mobile device in the future. This game works best on a desktop or tablet device.
+
 If a user wants to play the game to learn the words, they can:
 * Open the project page.
+* Check the instructions by clicking the instructions button.
 * Click the ‘Let’s Go’ Button.
+* When the pop up modal box appears the user can click the desired level of difficulty for the game.
 * Start to click the cards to match the cards together, one in English and one in Portuguese that have the same pictures. They will notice that if they click on a non-matching card, the cards will flip back over and if they click on two matching cards, the cards will stay turned up.
-* When the game has finished they can click the ‘Restart’ Button to play again or exit the page.
+* When the game has finished they can see how much time it took them to complete the game. They can click the ‘Restart’ Button to play again or exit the page.
+
 If a user wants to improve the time they can complete the game, they can:
 * Open the project page.
 * Click the ‘Let’s Go’ Button.
+* When the pop up modal box appears the user can click the desired level of difficulty for the game.
 * Click the ‘Start’ Button underneath the green number 60 which is the digital countdown timer.
 * Start to click the cards to match the cards together, one in English and one in Portuguese that have the same pictures. They will notice that if they click on a non-matching card, the cards will flip back over and if they click on two matching cards, the cards will stay turned up.
 * When the game has finished they can see how long it took them to match up all the cards. They can click the ‘Restart’ Button to play again or exit the page.
