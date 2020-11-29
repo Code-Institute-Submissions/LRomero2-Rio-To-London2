@@ -34,7 +34,13 @@ The project also uses images for backgrounds and card photos, both the front and
 
 ![Image of Screenshot](assets/imgs/screenshotwelcomepage.jpg)
 
+This was the original layout and design of the page.
+
 ![Image of Screenshot](assets/imgs/screenshotofgamepagelaptop.jpg)
+
+However I decided to change it to this (as seen below) because I think it is better looking and more uniform with the welcome page.
+
+![Image of Screenshot](assets/imgs/screenshot-newgamepage.jpg)
 
 # Testing
 I have tested my code using the HTML and CSS Validators and have discovered no problems. 
