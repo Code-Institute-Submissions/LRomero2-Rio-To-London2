@@ -60,7 +60,7 @@ However I decided to change it to this (as seen below) because I think it is bet
 I have tested my code using HTML Validators and have discovered no problems. 
 To test the HTML files I went to  https://validator.w3.org/#validate_by_input, entered the HTML code for both pages into the typing box, one by one. Then I clicked the run check button and it showed no errors. 
 ## CSS Validator Testing
-To test the CSS I went to https://jigsaw.w3.org/css-validator/validator, entered the CSS code into the typing box and clicked the run check button.
+To test the CSS I went to http://www.css-validator.org/, entered the CSS code into the typing box and clicked the run check button.
 The code passed the validator test. 
 ## Javascript Validator Testing
 I have also thoroughly tested the javascript code using jasmine and a Javascript Validator https://esprima.org/demo/validate.html.
