@@ -61,22 +61,22 @@ const cardData = [
  },
  {
    name: "Portuguesetoday",
-   image: "portuguesetoday.jpg.jpg",
+   image: "portuguesetoday.jpg",
    id: "portuguesetoday"
  },
  {
    name: "Englishtoday",
-   image: "englishtoday.jpg.jpg",
+   image: "englishtoday.jpg",
    id: "englishtoday"
  },
  {
    name: "Portugueseimgoingtogo",
-   image: "portugueseimgoingtogo.jpg.jpg",
+   image: "portugueseimgoingtogo.jpg",
    id: "portugueseimgoingtogo"
  },
  {
    name: "Englishimgoingtogo",
-   image: "englishimgoingtogo.jpg.jpg",
+   image: "englishimgoingtogo.jpg",
    id: "englishimgoingtogo"
  },
   {
