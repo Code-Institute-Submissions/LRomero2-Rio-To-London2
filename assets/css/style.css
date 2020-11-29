@@ -16,10 +16,18 @@ body {margin: 0;
 
 @media only screen and (max-width: 450px){
 .welcome
-{/*background: none;
-background-color: rgba(54, 116, 250, 0.699);*/
+{
 background-image: url('../imgs/welcomepagebackground.jpg');
 width: 200px;
+  height: 736px;
+  object-fit: cover;
+}
+}
+
+@media only screen and (max-width: 1140px){
+.welcome{
+background-image: url('../imgs/welcomepagebackground.jpg');
+width: 770px;
   height: 800px;
   object-fit: cover;
 }
@@ -45,6 +53,15 @@ width: 200px;
 }
 }
 
+@media only screen and (max-width: 768px){
+.container1{
+align-items: center;
+    position: absolute;
+    justify-content: center;
+    bottom: 20%;
+    left: 5%;
+}
+}
 
 .container2{
 align-items: center;
@@ -55,16 +72,27 @@ align-items: center;
 }
 
 
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 414px){
 .container2
 {align-items: center;
     position: absolute;
     justify-content: center;
     bottom: 20%;
-    right: 15%;
+    right: 5%;
 
 }
 }
+
+@media only screen and (max-width: 768px){
+.container2{
+align-items: center;
+    position: absolute;
+    justify-content: center;
+    bottom: 20%;
+    left: 40%;
+}
+}
+
 
 /*Popup box for instructions - Taken from - https://github.com/prithaupadhyay/Memory-Game*/
 .popup {
@@ -128,23 +156,36 @@ h2 {
     transform: translateY(-50%);
     letter-spacing: 0.2em;}
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 416px){
 h2
-{/*background: none;
-background-color: rgba(54, 116, 250, 0.699);*/
+{
 margin: 0;
     padding:0;
-    top:65%;
+    top:75%;
     width:90%;
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: 'Carter One', cursive;
-    font-size: 2.8em;
+    font-size: 3em;
     position: absolute; 
     transform: translateY(-50%);
 }
 }
 
+@media only screen and (max-width: 768px){
+h2{
+margin: 0;
+    padding:0;
+    top:60%;
+    width:70%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Carter One', cursive;
+    font-size: 4em;
+    position: absolute; 
+    transform: translateY(-50%);
+}
+}
 
 h2 span{
     opacity: 0;
