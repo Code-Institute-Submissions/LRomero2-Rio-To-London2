@@ -212,14 +212,10 @@ animation-delay: 3s;}
 
 
 .bg{ 
-  /*background:  url('../imgs/gamebackground4.jpg') no-repeat 0 0;*/
-  width: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-  background-size: cover;
-  background-position: 0 0;}
+   width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;}
  
 
 @media only screen and (max-width: 450px){
@@ -285,6 +281,39 @@ background-color: rgba(54, 116, 250, 0.699);
 
 
 
+#start-button{
+   font-family:  'Carter One', cursive;
+   color: black;
+   font-size: 20px; 
+   background-color: white;
+	border: 2px solid black;
+	border-radius: 40px;
+   text-decoration: none;
+   padding:4px;
+}
+
+.home-button {
+ color: white;
+  letter-spacing: 6px;
+  font-family: 'Carter One', cursive;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 18px;
+  top:0;
+  left:0;
+  }
+ 
+ /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
+ .home-button a {
+  text-decoration: none;
+  font-family: 'Carter One', cursive;
+  font-size: 18px;
+  color: white;
+}
+
+
+
 .hvr-underline-from-right {
   display: inline-block;
   vertical-align: middle;
@@ -314,732 +343,487 @@ background-color: rgba(54, 116, 250, 0.699);
   left: 0;
 }
 
-
-.container-fluid{
-    top:2%;
-    width:80%;
-    left:10%;
-    right: 10%;
-    }
+/*---------------------------------------------------------------------------------------------------------------------*/
 
 
-.row row-cols-4{
-height:10%;
+*,
+*::after,
+*::before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url('../imgs/welcomepagebackground.jpg');
+  color: rgb(6, 168, 6);
+  font-family: 'Carter One', cursive;
+}
+/* header */
+.site-title {
+  margin: 60px 0 40px;
+  color: red;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000, -2px -1px 0 #000, 2px -1px 0 #000, -2px 1px 0 #000, 2px 1px 0 #000;
+  letter-spacing: 8px;
+  font-family: 'Carter One', cursive;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+}
+
+.heading-1 {
+    text-align: center;
+    font-size: 60px;
 }
 
 
-.col {
+/* game board and cards */
+.board {
+  display: flex;
+  margin: auto;
+  max-width: 1110px;
+  flex-wrap: wrap;
+}
+
+.easy,
+.medium {
+  width: 740px;
+}
+
+.hard {
+  max-width: 1110px;
+}
+
+.card {
+  position: relative;
+  float: left;
+  margin: 3px;
+  width: 175px;
+  height: 175px;
+  text-align: center;
+}
+
+.card-back,
+.card-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front {
+   border-radius: 5px 20px 5px;
+  border: 2px solid #000000;
+  background-color: black;
+  background: cover;
+}
+
+.card-back {
+  border-radius: 5px 20px 5px;
+  border: 2px solid #000000;
+  background: cover;
+  background-color: #fff;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  padding:3%;
+  width: 100%;
+  height:100%;
+}
+
+/* click effect */
+.card.flipped .card-front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card.flipped .card-back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.counter,
+.timer,
+.home-button{
+  width: 33%;
+  height:29px;
+  text-align: center;
+}
+
+.info {
+  color: white;
+  border: black 12px;
+  letter-spacing: 6px;
+  font-family: 'Carter One', cursive;
+  text-align: center;
   z-index: 1;
   background: rgba(22, 21, 21, 0.541);
   overflow-x: hidden;
-  font-family: 'Carter One', cursive;
   text-decoration: none;
   font-size: 18px;
-  color: white;
-  /*padding: 6px 8px 6px 16px;*/
-  padding: 6px;
-  top:2%;
-  left:0;}
- 
- /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
- .col a {
-  padding: 6px;
-  text-decoration: none;
+  margin-top: 0;
+  left:0;
+}
+
+
+.data {
+  letter-spacing: normal;
   font-family: 'Carter One', cursive;
-  font-size: 18px;
-  color: white;
+  font-size: 22px;
 }
 
-/*From hover.css for hover effect on navbar*/
-.col a:hover {
-  color: rgba(255, 251, 21, 0.945);
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-@media screen and (max-width: 414px) {
-  .col a {
-    float: none;
-    width: 100%;
+
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border: double green 5px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  height:60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-data {
+    height: 10em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding-top: 5%;
+}
+
+.play-again {
+  width: 100%;
+}
+
+
+.time-result{
+    font-family: 'Carter One', cursive;
+    font-size: 22px;
+    color:red;
+    box-shadow: 2px, #000;
+    
+}
+
+.congrats {
+  font-family: 'Carter One', cursive;
+  font-size: 42px;
+  margin: auto;
+  top:40%;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 2px 0 #000;
+  letter-spacing: 6px;
+}
+
+#blinking{
+    animation:blinkingText 2.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: green;}
+    60%{    color: blue; }
+    99%{    color: yellow;}
+}
+
+
+.win-text {
+  font-family: 'Carter One', cursive;
+  font-size: 32px;
+  text-align: center;
+  bottom: 15%;
+  margin: 0;
+  align-items: center;
+    position: absolute;
+    justify-content: center;
+    left:25%;
+    padding: 2%;
+}
+
+#restart{
+  font-family: 'Carter One', cursive;
+  text-align: center;
+  bottom: 3%;
+  margin: 0;
+  align-items: center;
+    position: absolute;
+    justify-content: center;
+    left:40%;  
+}
+
+
+.clock-data{
+    color:blue;
+}
+
+
+h2 {
+    bottom:2%;
+}
+
+
+button {
+  background: green;
+  color: #fff;
+  display: block;
+  font-family: 'Carter One', cursive;
+  margin: auto;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: yellow;
+  text-decoration: none;
+  color: green;
+}
+
+.level-button {
+  width: 200px;
+  background-color:green;
+}
+
+.site-title.start {
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.choose {
+  font-family: 'Carter One', cursive;
+  font-size: 35px;
+  color: rgb(238, 238, 12);
+  margin: 10px 0 40px;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 2px 0 #000;
+  letter-spacing: 6px;
+  -webkit-text-stroke: 1px green;
+  width: 100%;
+}
+
+.start {
+  flex-basis: 100%;
+}
+
+@media (max-width: 1200px) {
+  .hard .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hard {
+    max-width: 960px;
   }
 }
 
+@media (max-width: 1200px) {
+  .hard .card {
+    width: 125px;
+    height: 125px;
+  }
 
-
-/*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*
-.main {
-  margin-left: 140px; 
-  font-size: 28px; 
-  padding: 0px 10px;
+  .hard {
+    max-width: 810px;
+  }
 }
 
-@media screen and (max-height: 450px) {
-  .col {padding-top: 15px;}
-  .col a {font-size: 18px;}
+@media (max-width: 880px) {
+  .hard .card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hard {
+    max-width: 660px;
+  }
 }
 
+@media (max-width: 800px) {
+  .site-title {
+    font-size: 90px;
+    margin: 45px 0 30px;
+    text-align: center;
+  }
 
-.card-deck {
-  width: 900px;
-  height: 600px;
-  margin:auto;
-  justify-content: space-between;
-  padding: 0;
-  display: grid;
-  margin-top: 3%;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 200px 200px;
-  grid-gap: 10px;}
 
-@media only screen and (max-width: 450px) {
- .card-deck{
-  width: 500px;
-  height: 200px;
-  margin:auto;
-  justify-content: space-between;
-  padding: 0;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 33% 33% 33%;}
+  .info {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .easy,
+  .medium {
+    max-width: 640px;
+  }
 }
 
-
-.memory-cards {
-  height: 180px;
-  width: 200px;
-  margin: 5%;
-  position: relative;
-  box-shadow: 5px 5px 5px rgba(75, 75, 75, 0.774);
-   transform-style: preserve-3d;
-   transition: transform .5s;}
-
-@media only screen and (max-width: 450px){
-.memory-cards 
-{height: 80px;
-width: 100px;
-margin-top: 80%;
-justify-content: space-between;
-}
+@media (max-width: 700px) {
+  .hard {
+    max-width: 440px;
+  }
 }
 
-.front-face,
-.back-face {
-  width: 100%;
-  height: 100%;
-  padding: 6px;
-  position: absolute;
-  border-radius: 2px;
-  backface-visibility: hidden;}
+@media (max-width: 660px) {
+  .info {
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
 
+  .data {
+    font-size: 24px;
+  }
 
-.memory-cards:active {
-  transition: transform .2s;}
+  .card {
+    width: 125px;
+    height: 125px;
+  }
 
+  .easy,
+  .medium {
+    max-width: 540px;
+  }
 
-.memory-cards.flip {
-  transform: rotateY(180deg);}
+  .timer {
+    order: 1;
+    flex-basis: 50%;
+  }
 
+  .counter {
+    order: 2;
+    flex-basis: 50%;
+  }
 
-.front-face {
-    transform: rotateY(180deg);
+  .rating {
+    order: 3;
+    flex-basis: 100%;
+  }
 }
 
+@media (max-width: 580px) {
+  .site-title {
+    font-size: 70px;
+    margin: 25px 0 10px;
+    text-align: center;
+  }
 
 
-#timer {
-    top:8%;
-    left:42%;
-    position: absolute;
-    font-family:  'Carter One', cursive;
-    font-size: 38px;
-    background: rgba(22, 21, 21, 0.541);
-    color: red;}
+  .card {
+    width: 100px;
+    height: 100px;
+  }
 
-@media only screen and (max-width: 450px){
-#timer
-{left: 20%;
-}
-}
-*/
-     
-/*
-#start-button {
-    top:6%;
-    left:36%;
-    position: absolute;
-    font-family:  'Carter One', cursive;
-    font-size: 20px;
-    background: rgba(22, 21, 21, 0.541);
-    color: #53ff1f;}
-*/
-
-
-.bg-modal {
-	background-color: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	display: none;
-	justify-content: center;
-	align-items: top;
-  padding: 20px;
-  transition: all 6s ease-in-out;
+  .easy,
+  .medium {
+    max-width: 440px;
+  }
 }
 
-.modal-contents {
-	height: 300px;
-	width: 500px;
-	background-color: white;
-	text-align: center;
-	padding: 20px;
-	position: relative;
-	border-radius: 4px;
+@media (max-width: 500px) {
+  .site-title {
+    font-size: 70px;
+    margin: 25px 0 10px;
+    text-align: center;
+  }
+
+
+  .hard .card {
+    width: 75px;
+    height: 75px;
+  }
+
+  .hard {
+    max-width: 340px;
+  }
 }
 
-input {
-	margin: 15px auto;
-	display: block;
-	width: 50%;
-	padding: 8px;
-	border: 1px solid gray;
+@media (max-width: 450px) {
+  .site-title {
+    font-size: 55px;
+    margin: 25px 0 10px;
+    text-align: center;
+  }
+
+
+  .card {
+    width: 75px;
+    height: 75px;
+  }
+
+  .easy,
+  .medium {
+    max-width: 340px;
+  }
+
+  .counter,
+  .timer {
+    flex-basis: 100%;
+  }
+
+  .data,
+  .info {
+    font-size: 28px;
+  }
 }
-
-.close {
-	position: absolute;
-	top: 0;
-	right: 10px;
-	font-size: 42px;
-	color: #333;
-	transform: rotate(45deg);
-	cursor: pointer;
-}
-
-
-.placeholder-text{
-    font-family:  'Carter One', cursive;
-}
-
-
-#start-button{
-   font-family:  'Carter One', cursive;
-   color: black;
-   font-size: 20px; 
-   background-color: white;
-	border: 2px solid black;
-	border-radius: 40px;
-   text-decoration: none;
-   padding:4px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Cards Animations by Animate.css: https://daneden.github.io/animate.css/*/
-
-/*
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	overflow: hidden;
-	font-family:  'Carter One', cursive;
-    width: 100%;
-	height: 100%
-    background: blue;}*/
-/*
-.deck {
-	width: 70%;
-	margin: 0 auto;
-	background-color:black;
-	padding: 16px;
-	border-radius: 10px;
-	box-shadow: 20px 20px 0 0 red;}*/
-	/*
-
-.deck {
-  width: 90%;
-  height: 70%;
-  margin:auto;
-  justify-content: space-between;
-  padding: 0;
-  display: grid;
-  margin-top: 3%;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 200px 200px;
-  grid-gap: 10px;}
-
-@media only screen and (max-width: 450px) {
- .deck{
-  width: 500px;
-  height: 200px;
-  margin:auto;
-  justify-content: space-between;
-  padding: 0;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 33% 33% 33%;}
-}
-
-
-
-	.card {
-		height: 180px;
-        width: 200px;
-		background-color:yellow;
-		display: inline-block;
-		margin: 0 15px 15px 0;
-		line-height: 140px;
-		font-size: 0;
-		color: #ffffff;
-		text-align: center;
-		border-radius: 8px;
-		vertical-align: top;
-		cursor: pointer;
-		transform: rotateY(180deg);
-		transform-style: preserve-3d;
-		transition: transform .3s ease;
-		font-family: FontAwesome;
-    
-
-		&:nth-child(4n) {
-			margin: 0 0 15px 0;
-		}
-
-		&:nth-child(n+13) {
-			margin: 0 15px 0 0;
-
-			&:nth-child(4n) {
-				margin: 0;
-			}
-        }
-
-		&.open {
-			transform: rotateY(0);
-			background: $card_opend-background;
-			cursor: default;
-		}
-		&.show {
-			font-size: 33px;
-		}
-
-		&.match {
-			transform: rotateY(0);
-			cursor: default;
-			background: $card_match-background;
-			font-size: 33px;
-		}
-
-		&.notmatch {
-			background: $card_notmatch-background;
-        }
-	}
-}
-
-
-#score-panel {
-	text-align: center;
-	width: 80%;
-	margin: 10px;
-}
-	*/
-
-   /* 
-.card  {
-  height: 180px;
-  width: 200px;
-  margin: 5%;
-  position: relative;
-  box-shadow: 5px 5px 5px rgba(75, 75, 75, 0.774);
-   transform-style: preserve-3d;
-   transition: transform .5s;}
-
-@media only screen and (max-width: 450px){
-.card  
-{height: 80px;
-width: 100px;
-margin-top: 80%;
-justify-content: space-between;
-}
-}
-
-.front-face,
-.back-face {
-  width: 100%;
-  height: 100%;
-  padding: 6px;
-  position: absolute;
-  border-radius: 2px;
-  backface-visibility: hidden;}
-
-
-.memory-cards:active {
-  transition: transform .2s;}
-
-
-.memory-cards.flip {
-  transform: rotateY(180deg);}
-
-
-.front-face {
-    transform: rotateY(180deg);
-}
-*/
-
-
-
-
-
-
-
-
-
-
-/*
-html {
-	box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
-html,
-body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background: #ffffff;
-	font-family: 'Permanent Marker', cursive;
-	font-size: 16px;
-}*/
-
-.container {
-    height:50%;
-    width:80%;
-	justify-content: center;
-	align-items: center;
-}
-
-h1 {
-	font-family: 'Gloria Hallelujah', cursive;
-}
-
-
-/*
- * Styles for the deck of cards
- */
-
-
-.deck {
-	width: 85%;
-	background: #716F71;
-	padding: 1rem;
-	border-radius: 4px;
-	box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	margin: 0 0 3em;
-}
-
-.deck .card {
-	height: 3.7rem;
-	width: 3.7rem;
-	margin: 0.2rem 0.2rem;
-	background-image: url('../imgs/cardflag.jpg');
-    background-size: cover;
-	font-size: 0;
-	color: #ffffff;
-	border-radius: 5px;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-}
-
-.deck .card.open {
-	transform: rotateY(0);
-	background: #02b3e4;
-	cursor: default;
-	animation-name: flipInY;
-	-webkit-backface-visibility: visible !important;
-	backface-visibility: visible !important;
-	animation-duration: .75s;
-}
-
-.deck .card.show {
-	font-size: 33px;
-}
-
-.deck .card.match {
-	cursor: default;
-	background: #E5F720;
-	font-size: 33px;
-	animation-name: rubberBand;
-	-webkit-backface-visibility: visible !important;
-	backface-visibility: visible !important;
-	animation-duration: .75s;
-}
-
-.deck .card.unmatched {
-	animation-name: pulse;
-	-webkit-backface-visibility: visible !important;
-	backface-visibility: visible !important;
-	animation-duration: .75s;
-	background: #e2043b;
-}
-
-.deck .card.disabled {
-	pointer-events: none;
-	opacity: 0.9;
-}
-
-
-/*
- * Styles for the Score Panel
- */
-
-
-.score-panel {
-	text-align: left;
-	margin-bottom: 10px;
-}
-
-.score-panel .stars {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	margin: 0 5px 0 0;
-}
-
-.score-panel .stars li {
-	list-style: none;
-	display: inline-block;
-}
-
-.score-panel .restart {
-	float: right;
-	cursor: pointer;
-}
-
-.fa-star {
-	color: #FFD700;
-}
-
-.timer {
-	display: inline-block;
-	margin: 0 1rem;
-}
-
-
-/*
- * Styles for congratulations modal
- */
-
-
-.overlay {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.7);
-	transition: opacity 500ms;
-	visibility: hidden;
-	opacity: 0;
-}
-
-.overlay:target {
-	visibility: visible;
-	opacity: 1;
-}
-  
-.popup {
-	margin: 70px auto;
-	padding: 20px;
-	background: #ffffff;
-	border-radius: 5px;
-	width: 85%;
-	position: relative;
-	transition: all 5s ease-in-out;
-	font-family: 'Gloria Hallelujah', cursive;
-}
-  
-.popup h2 {
-	margin-top: 0;
-	color: #333;
-	font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
-	position: absolute;
-	top: 20px;
-	right: 30px;
-	transition: all 200ms;
-	font-size: 30px;
-	font-weight: bold;
-	text-decoration: none;
-	color: #333;
-}
-
-.popup .close:hover {
-	color: #E5F720;
-}
-
-.popup .content-1,
-.content-2 {
-	max-height: 30%;
-	overflow: auto;
-	text-align: center;
-}
-
-.show {
-	visibility: visible !important;
-	opacity: 100 !important;
-}
-
-#starRating li {
-	display: inline-block;
-}
-
-#play-again {
-	background-color: #141214;
-	padding: 0.7rem 1rem;
-	font-size: 1.1rem;
-	display: block;
-	margin: 0 auto;
-	width: 50%;
-	font-family: 'Gloria Hallelujah', cursive;
-	color: #ffffff;
-	border-radius: 5px;
-}
-
-/* animations */
-@keyframes flipInY {
-	from {
-		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-		animation-timing-function: ease-in;
-		opacity: 0;
-	}
-
-	40% {
-		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-		animation-timing-function: ease-in;
-	}
-
-	60% {
-		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-		opacity: 1;
-	}
-
-	80% {
-		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-	}
-
-	to {
-		transform: perspective(400px);
-	}
-}
-
-@keyframes rubberBand {
-	from {
-		transform: scale3d(1, 1, 1);
-	}
-
-	30% {
-		transform: scale3d(1.25, 0.75, 1);
-	}
-
-	40% {
-		transform: scale3d(0.75, 1.25, 1);
-	}
-
-	50% {
-		transform: scale3d(1.15, 0.85, 1);
-	}
-
-	65% {
-		transform: scale3d(.95, 1.05, 1);
-	}
-
-	75% {
-		transform: scale3d(1.05, .95, 1);
-	}
-
-	to {
-		transform: scale3d(1, 1, 1);
-	}
-}
-
-@keyframes pulse {
-	from {
-		transform: scale3d(1, 1, 1);
-	}
-
-	50% {
-		transform: scale3d(1.2, 1.2, 1.2);
-	}
-
-	to {
-		transform: scale3d(1, 1, 1);
-	}
-}
-
-
-/****** Media queries
-***************************/
-
-
-@media (max-width: 320px) {
-	.deck {
-		width: 85%;
-	}
-
-	.deck .card {
-		height: 4.7rem;
-		width: 4.7rem;
-	}
-}
-
-
-/* For Tablets and larger screens
-****************/
-
-@media (min-width: 768px) {
-	.container {
-		font-size: 22px;
-	}
-
-	.deck {
-		width: 660px;
-		height: 680px;
-	}
-
-	.deck .card {
-		height: 125px;
-		width: 125px;
-	}
-
-	.popup {
-		width: 60%;
-	}
-}
-
