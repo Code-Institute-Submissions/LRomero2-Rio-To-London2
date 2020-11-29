@@ -100,7 +100,8 @@ To deploy my project I will push my latest code to GitHub by using the standard 
 The text for sections I have imitated or copied are clearly marked within my code. Here is a list of the other resources I used to complete my project. 
 * **Youtube:**
 Pure CSS Text Reveal From Smoke Animation Effect | CSS Animation Tutorial https://www.youtube.com/watch?v=lx3UtGiRcYA
-Build your own COUNTDOWN TIMER in 15 lines of JavaScript code, Ania Kubów #JavaScriptGames https://www.youtube.com/watch?v=vSV_Ml2_A88
+* **Github:**
+The Javascript code I have imitated from this project in Github https://github.com/afratetlay/memory_game/blob/master/index.html
 * **Websites:**
 https://www.freecodecamp.org/news/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae/ Memory Game in Vanilla JavaScript
 ### Media
