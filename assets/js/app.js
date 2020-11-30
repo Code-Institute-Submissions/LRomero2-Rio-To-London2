@@ -157,7 +157,7 @@
   const gameOver = () => {
     clearInterval(timer);
 
-    // Pause before shoe modal
+    // Pause before modal
     setTimeout(function() {
       $("#winModal").show();
     }, 500);
