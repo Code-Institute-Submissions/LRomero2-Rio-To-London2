@@ -361,6 +361,12 @@ body {
   flex-wrap: wrap;
 }
 
+@media (max-width: 450px){
+.board
+{margin-top:5%;
+}
+}
+
 .easy,
 .medium {
   width: 740px;
@@ -459,6 +465,20 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 450px){
+.counter,
+.timer
+{ width: 33%;
+  height:29px;
+  text-align: center;
+  margin:3px;
+  padding:5%;
+}
+}
+
+
+
+
 .info {
   color: white;
   border: black 12px;
@@ -473,6 +493,16 @@ footer {
   margin-top: 0;
   left:0;
 }
+
+
+
+@media (max-width: 450px){
+.info
+{ font-size: 14px;
+}
+}
+
+
 
 
 .data {
@@ -679,7 +709,6 @@ animation-duration: 0.4s
  .congrats{
  font-family: 'Carter One', cursive;
   font-size: 40px;
-  left:20%;
   margin: auto;
   top:40%;
   text-align: center;

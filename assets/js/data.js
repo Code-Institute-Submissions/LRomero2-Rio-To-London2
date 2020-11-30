@@ -121,3 +121,18 @@ const gameLevels = {
    oneStar: 24
  }
 };
+
+
+var words = {
+   Englishbread: "Portuguesebread",
+   Englishand: "Portugueseand",
+   Englishimgoingtogo: "Portugueseimgoingtogo",
+   Englishtoday: "Portuguesetoday",
+   Englishtothe: "Portuguesetothe",
+   Englishcoffee: "Portuguesecoffee",
+   Englishbuy: "Portuguesebuy",
+   Englishto: "Portugueseto",
+   Englishshop: "Portugueseshop",
+   Englishiwent: "Portugueseiwent",
+}
+
