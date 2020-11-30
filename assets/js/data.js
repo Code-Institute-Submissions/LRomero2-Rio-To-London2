@@ -122,17 +122,17 @@ const gameLevels = {
  }
 };
 
-
+/*
 var words = {
-   Englishbread: "Portuguesebread",
-   Englishand: "Portugueseand",
-   Englishimgoingtogo: "Portugueseimgoingtogo",
-   Englishtoday: "Portuguesetoday",
-   Englishtothe: "Portuguesetothe",
-   Englishcoffee: "Portuguesecoffee",
-   Englishbuy: "Portuguesebuy",
-   Englishto: "Portugueseto",
-   Englishshop: "Portugueseshop",
-   Englishiwent: "Portugueseiwent",
+   Englishbread: "Portuguesebread" class="card-image ${this.name}",
+   Englishand: "Portugueseand" class="card-image ${this.name}",
+   Englishimgoingtogo: "Portugueseimgoingtogo" class="card-image ${this.name}",
+   Englishtoday: "Portuguesetoday" class="card-image ${this.name}",
+   Englishtothe: "Portuguesetothe" class="card-image ${this.name}",
+   Englishcoffee: "Portuguesecoffee" class="card-image ${this.name}",
+   Englishbuy: "Portuguesebuy" class="card-image ${this.name}",
+   Englishto: "Portugueseto" class="card-image ${this.name}",
+   Englishshop: "Portugueseshop" class="card-image ${this.name}",
+   Englishiwent: "Portugueseiwent" class="card-image ${this.name}",
 }
-
+*/
