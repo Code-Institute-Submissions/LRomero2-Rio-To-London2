@@ -1092,22 +1092,34 @@ align-items: center;
 }
 
 
-
 @media only screen and (max-width: 480px){
-h2 .rio
-{
-margin: 0;
+.glow {
+  margin: 0;
     padding:0;
-    top:75%;
+    top:65%;
     width:90%;
-    text-align: center;
-    color: black;
     font-family: 'Carter One', cursive;
-    font-size: 2em;
+    font-size: 3em;
     position: absolute; 
     transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange, 
+    0 0 50px orange, 0 0 60px orange, 0 0 70px orange;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #e48202, 0 0 40px #e48202, 0 0 50px #e48202, 0 0 60px #e48202, 
+    0 0 70px #e48202, 0 0 80px #e48202;
+  }
 }
+
 
 @media only screen and (max-width: 1062px){
 h2 {
