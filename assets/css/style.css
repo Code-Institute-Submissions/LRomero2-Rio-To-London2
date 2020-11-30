@@ -45,6 +45,13 @@ align-items: center;
   transition: all 5s ease-in-out;
 }
 
+@media only screen and (max-width: 480px){
+.popup1{
+width: 90%;
+margin: 10px auto;
+}
+}
+
 @media only screen and (max-width: 1062px){
 .popup1{
 width: 80%;
@@ -474,7 +481,19 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-
+@media (max-width: 480px) {
+  .modal {
+     display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  }
 
 .modal-content {
   position: relative;
@@ -495,6 +514,28 @@ footer {
 animation-name: animatetop;
 animation-duration: 0.4s
 }
+
+
+@media (max-width: 480px) {
+  .modal-content {
+    position: relative;
+  background-color: #fff;
+  border: double green 5px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  height:60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+  }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -607,6 +648,16 @@ button:hover {
   background-color:green;
 }
 
+@media (max-width: 480px) {
+ .level-button {
+    width: 200px;
+    height:50px;
+  background-color:green;
+  margin:auto;
+  padding:2px;
+  }
+
+
 .site-title.start {
   margin: 0 0 30px;
   text-align: center;
@@ -623,6 +674,20 @@ button:hover {
   -webkit-text-stroke: 1px green;
   width: 100%;
 }
+
+
+@media (max-width: 480px) {
+ .choose {
+     font-family: 'Carter One', cursive;
+  font-size: 30px;
+  color: rgb(238, 238, 12);
+  margin: 10px 0 40px;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 2px 0 #000;
+  letter-spacing: 6px;
+  -webkit-text-stroke: 1px green;
+  width: 100%;
+  }
 
 .start {
   flex-basis: 100%;
@@ -767,7 +832,7 @@ button:hover {
 
 @media (max-width: 450px) {
   .site-title {
-    font-size: 55px;
+    font-size: 35px;
     margin: 25px 0 10px;
     text-align: center;
   }
