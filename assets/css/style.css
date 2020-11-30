@@ -560,6 +560,81 @@ animation-duration: 0.4s
     padding-top: 5%;
 }
 
+
+#winmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 480px) {
+  #winmodal {
+     display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+
+#winModal .modal-content {
+  position: relative;
+  background-color: #fff;
+  border: double green 5px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  height:500px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+
+
+@media (max-width: 480px) {
+  #winModal .modal-content {
+    position: relative;
+  background-color: #fff;
+  border: double green 5px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  height:60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+  }
+}
+
+
+
 .play-again {
   width: 100%;
 }
@@ -582,6 +657,23 @@ animation-duration: 0.4s
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 2px 0 #000;
   letter-spacing: 6px;
 }
+
+
+
+
+@media (max-width: 480px) {
+ .congrats{
+ font-family: 'Carter One', cursive;
+  font-size: 40px;
+  left:20%;
+  margin: auto;
+  top:40%;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 2px 0 #000;
+  letter-spacing: 6px;
+  }
+}
+
 
 #blinking{
     animation:blinkingText 2.2s infinite;
@@ -606,6 +698,24 @@ animation-duration: 0.4s
     padding: 2%;
 }
 
+
+@media (max-width: 480px) {
+ .win-text {
+   font-family: 'Carter One', cursive;
+  font-size: 26px;
+  text-align: center;
+  bottom: 15%;
+  margin: 0;
+  align-items: center;
+    position: absolute;
+    justify-content: center;
+    left:15%;
+    padding: 2%;
+  }
+}
+
+
+
 #restart{
   font-family: 'Carter One', cursive;
   text-align: center;
@@ -617,9 +727,32 @@ animation-duration: 0.4s
     left:40%;  
 }
 
+@media (max-width: 480px) {
+ #restart {
+    font-family: 'Carter One', cursive;
+  text-align: center;
+  bottom: 3%;
+  margin: 0;
+  align-items: center;
+    position: absolute;
+    justify-content: center;
+    left:35%;  
+  }
+}
+
 
 .clock-data{
     color:blue;
+}
+
+
+@media (max-width: 480px) {
+ .clock-data {
+     font-family: 'Carter One', cursive;
+ left:35%;
+  color: rgb(238, 238, 12);
+  -webkit-text-stroke: 1px green;
+  }
 }
 
 
