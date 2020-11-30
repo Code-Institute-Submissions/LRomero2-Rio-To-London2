@@ -494,6 +494,7 @@ footer {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
   }
+}
 
 .modal-content {
   position: relative;
@@ -506,8 +507,7 @@ footer {
   flex-wrap: wrap;
   margin: auto;
   padding: 20px;
-  width: 50%;
-  height:60%;
+  width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 -webkit-animation-name: animatetop;
 -webkit-animation-duration: 0.4s;
@@ -536,6 +536,7 @@ animation-duration: 0.4s
 animation-name: animatetop;
 animation-duration: 0.4s
   }
+}
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -656,7 +657,7 @@ button:hover {
   margin:auto;
   padding:2px;
   }
-
+}
 
 .site-title.start {
   margin: 0 0 30px;
@@ -688,6 +689,7 @@ button:hover {
   -webkit-text-stroke: 1px green;
   width: 100%;
   }
+}
 
 .start {
   flex-basis: 100%;
@@ -950,4 +952,6 @@ margin: 0;
     transform: translateY(-50%);
 }
 }
+
+
 
