@@ -415,13 +415,11 @@ body {
    border-radius: 5px 20px 5px;
   border: 2px solid #000000;
   background-color: black;
-  background: cover;
 }
 
 .card-back {
   border-radius: 5px 20px 5px;
   border: 2px solid #000000;
-  background: cover;
   background-color: #fff;
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
@@ -498,8 +496,7 @@ footer {
 
 @media (max-width: 450px){
 .info
-{ font-size: 14px;
-}
+{ font-size: 14px;}
 }
 
 
@@ -688,8 +685,6 @@ animation-duration: 0.4s
     font-family: 'Carter One', cursive;
     font-size: 22px;
     color:red;
-    box-shadow: 2px, #000;
-    
 }
 
 .congrats {
@@ -1061,7 +1056,7 @@ width: 100%;
     position: absolute;
     justify-content: center;
     bottom: 20%;
-    left: 5%;
+    left: 3%;
 }
 }
 
@@ -1082,7 +1077,7 @@ align-items: center;
     position: absolute;
     justify-content: center;
     bottom: 20%;
-    right: 5%;
+    right: 3%;
 }
 }
 
@@ -1099,14 +1094,14 @@ align-items: center;
 
 
 @media only screen and (max-width: 480px){
-h2 
+h2 .rio
 {
 margin: 0;
     padding:0;
     top:75%;
-    width:80%;
+    width:90%;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: black;
     font-family: 'Carter One', cursive;
     font-size: 2em;
     position: absolute; 
