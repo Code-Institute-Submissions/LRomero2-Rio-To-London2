@@ -16,6 +16,9 @@ Additionally they can return to the welcome page a try a different level.
 Here is the Wireframe sketch for my project idea. This is the Wireframe for the project on desktop and tablet view. 
 The game looks best on a desktop or laptop. 
 
+![Image of Wireframe](assets/imgs/wireframeforwelcomepageonsecondproject.png)
+
+
 ![Image of Wireframe](assets/wireframes/wireframe-for-second-project.png)
 
 # Features
@@ -100,14 +103,28 @@ If a user wants to play the game to learn the words, they can:
 Here is an image of the screen upon completing the game.
 ![Image of Screenshot](assets/imgs/SharedScreenshotwelldonemodal.jpg)
 
+# Testing User Stories from User Experience (UX) Section
+ ### As a First Time Visitor, I want to easily understand the purpose of the site.
+
+* When entering the site users can see a neat and simple layout. The navigation buttons are easy to locate and understand, one for the instructions and one to start the game.
+* The idea of the game is made clear in the instructions modal.
+* The user can then try the game and see if they like it.
+
+### As a returning Visitor, I want to see if I can improve my progress in completing the game.
+* The user can start the game as normal and throughout the game see how many moves they have used by checking the 'moves' counter above the card deck.
+* The user can then see how long it took them to finish the game. The well done modal will appear when they have matched all the cards together showing how long it took them to finish it.
+
+
 # Deployment
 To deploy my project I will push my latest code to GitHub by using the standard method of code: 
 * Git commit
 * Then git push
-* Then I will go to my account on GitHub
+* Then I will go to my account on GitHub and locate the GitHub Repository
 * When I have logged in I will go to my repositories and select the memory-game project
-* Then I will select the settings tab, scroll down until the GitHub pages section and select the master branch I want to deploy
+* Then I will select the settings tab on the menu, scroll down until the GitHub pages section and under "Source" click the dropdown called "None" and select "Master Branch".
 * Then I will click save
+* Then to check it has deployed I will scroll back down through the page to locate the published site link in the "GitHub Pages" section.
+
 
 # Credits
 ### Content

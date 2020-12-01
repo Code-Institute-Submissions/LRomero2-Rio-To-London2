@@ -1,17 +1,16 @@
+// Most Javascript was imitated from  https://github.com/afratetlay/memory_game/blob/master/index.html
 (() => {
   "use strict";
 
   let click1 = {},
     click2 = {},
     level = "medium",
-    numStars = 3,
     pairs = 8,
     gameStarted,
     matches,
     moves,
-    timer,
-    twoStar,
-    oneStar;
+    timer;
+   
 
   class Card {
     constructor(card, num) {
@@ -33,8 +32,6 @@
   const setLevel = level => {
     $("#startModal").hide();
     pairs = gameLevels[level].pairs;
-    twoStar = gameLevels[level].twoStar;
-    oneStar = gameLevels[level].oneStar;
     $("#game-board").removeClass("easy medium hard");
     $("#game-board").addClass(gameLevels[level].class);
   };
@@ -93,7 +90,7 @@
       $(card.id).click(function() {
         // Start timer on first click
         if (!gameStarted) {
-          // start timer!
+          // start timer
           gameTimer();
           gameStarted = true;
         }
@@ -144,11 +141,11 @@
   };
 
   const hideCards = () => {
-    //hide cards
+    //Hide cards
     setTimeout(function() {
       $(click1.id).removeClass("flipped");
       $(click2.id).removeClass("flipped");
-      // reset click objects
+      // Reset click objects
       click1 = {};
       click2 = {};
     }, 600);
@@ -157,23 +154,12 @@
   const gameOver = () => {
     clearInterval(timer);
 
-    // Pause before shoe modal
+    // Pause before show modal
     setTimeout(function() {
       $("#winModal").show();
     }, 500);
   };
 
-  const checkStars = () => {
-    let currentStars;
-    if (moves >= oneStar) {
-      currentStars = 1;
-    } else if (moves >= twoStar) {
-      currentStars = 2;
-    } else currentStars = 3;
-    if (numStars !== currentStars) {
-      displayStars(currentStars);
-    }
-  };
 
   const gameTimer = () => {
     let startTime = new Date().getTime();
@@ -201,14 +187,6 @@
     }, 750);
   };
 
-  // Add stars to game screen and modal
-  const displayStars = num => {
-    const starImage = '<img src="images/rating-star.png">';
-    $(".stars").empty();
-    for (let i = 0; i < num; i++) {
-      $(".stars").append(starImage);
-    }
-  };
 
   // Open start modal on load
   $(window).on("load", function() {
@@ -274,6 +252,5 @@
 
     shuffle(cardArray);
     displayCards(cardArray);
-    displayStars(3);
   };
 })();
