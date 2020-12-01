@@ -89,6 +89,9 @@ If a user wants to improve the time they can complete the game, they can:
 
 
 
+Here is an image of the screen upon completing the game.
+![Image of Screenshot](assets/imgs/SharedScreenshotwelldonemodal.jpg)
+
 # Deployment
 To deploy my project I will push my latest code to GitHub by using the standard method of code: 
 * Git commit

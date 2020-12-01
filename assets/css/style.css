@@ -380,8 +380,8 @@ body {
   position: relative;
   float: left;
   margin: 3px;
-  width: 175px;
-  height: 175px;
+  width: 160px;
+  height: 160px;
   text-align: center;
 }
 
@@ -395,7 +395,6 @@ body {
   text-align: center;
 }
 }
-
 
 
 .card-back,
@@ -1049,16 +1048,7 @@ width: 100%;
 }
 }
 
-/*
-    @media only screen and (max-width: 480px){
-.container1
-{align-items: center;
-    position: absolute;
-    justify-content: center;
-    bottom: 5%;
-    left: 1%;
-}
-}*/
+
 
 @media only screen and (max-width: 1062px){
 .container1{
@@ -1070,17 +1060,7 @@ align-items: center;
 }
 }
 
-/*
-  @media only screen and (max-width: 480px){
-.container2
-{align-items: center;
-    position: absolute;
-    justify-content: center;
-    bottom: 5%;
-    right: 1%;
-}
-}
-*/
+
 @media only screen and (max-width: 1062px){
 .container2{
 align-items: center;
@@ -1104,12 +1084,12 @@ align-items: center;
     transform: translateY(-50%);
   color: #fff;
   text-align: center;
-  -webkit-animation: glow 2s ease-in-out infinite alternate;
-  -moz-animation: glow 2s ease-in-out infinite alternate;
-  animation: glow 2s ease-in-out infinite alternate;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange, 
     0 0 50px orange, 0 0 60px orange, 0 0 70px orange;
