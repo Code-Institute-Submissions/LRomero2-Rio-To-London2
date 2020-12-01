@@ -17,7 +17,7 @@
     constructor(card, num) {
       let cardID = card.id + "-" + num;
       this.id = "#" + card.id + "-" + num;
-      this.image = card.image;
+      this.image = num == 1 ? card.image1 : card.image2;
       this.name = card.name;
       this.html = `<div class="card" id="${cardID}">
         <div class="card-back">
@@ -25,7 +25,7 @@
         </div>
         <div class="card-front">
           <img src="assets/imgs/cardflag.jpg" class="card-image" >
-        </div>
+         </div>
       </div>`;
     }
   }
@@ -157,7 +157,7 @@
   const gameOver = () => {
     clearInterval(timer);
 
-    // Pause before modal
+    // Pause before shoe modal
     setTimeout(function() {
       $("#winModal").show();
     }, 500);
@@ -203,7 +203,7 @@
 
   // Add stars to game screen and modal
   const displayStars = num => {
-    const starImage = '<img src="assets/images/rating-star.png">';
+    const starImage = '<img src="images/rating-star.png">';
     $(".stars").empty();
     for (let i = 0; i < num; i++) {
       $(".stars").append(starImage);
