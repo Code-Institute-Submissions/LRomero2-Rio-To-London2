@@ -88,7 +88,7 @@ The code passed the validator test.
 I have also thoroughly tested the javascript code using jasmine and a Javascript Validator https://esprima.org/demo/validate.html.
 ## Manual Testing
 I have also manually tested all components of the project. All of the pages and features are working well with no bugs or problems. 
-I have tested the project thoroughly on a laptop and it looks good and works well. It is still playable on a mobile device and tablet however I would like to improve the appearance of the game on a mobile device in the future. This game works best on a desktop or tablet device.
+I have tested the project thoroughly on a laptop and it looks good and works well and I have tested it on my tablet and mobile. This game works best on a desktop or tablet device.
 
 If a user wants to play the game to learn the words, they can:
 * Open the project page.
