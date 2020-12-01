@@ -86,6 +86,8 @@ To test the CSS I went to http://www.css-validator.org/, entered the CSS code in
 The code passed the validator test. 
 ## Javascript Validator Testing
 I have also thoroughly tested the javascript code using jasmine and a Javascript Validator https://esprima.org/demo/validate.html.
+## Jasmine Testing
+I have followed the video tutorial on the code institute course for using Jasmine testing and have stored these files in the gitignore folder.
 ## Manual Testing
 I have also manually tested all components of the project. All of the pages and features are working well with no bugs or problems. 
 I have tested the project thoroughly on a laptop and it looks good and works well and I have tested it on my tablet and mobile. This game works best on a desktop or tablet device.
