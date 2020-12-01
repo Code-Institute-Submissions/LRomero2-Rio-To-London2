@@ -33,17 +33,33 @@ Here are a few photos of the pop up modal boxes built into the game.
 I would like to implement in the future a feature to display the words in the correct order of the sentence at the top of the page to show the whole sentence altogether. I would also like to add a voice feature that pronounces the words as they are clicked on.
 ## Technologies Used
 
-### Javascript
+## Languages Used
+ Javascript
 * The project uses Javascript to implement the shuffle and card matching effect. This was used to be able to intelligently restart the game so the user could play again,  match the correct cards together and flip them back over when they are not matched cards. It also shuffles the cards so that they user can play the game again without already knowing where the matched cards are. 
          The project also uses Javascript for the timer. I referred to a free code camp page to make the cards flip, shuffle and match.
 
-### CSS
+ CSS
 * The project uses CSS to style the welcome page, game page, buttons, navbar, cards and titles. 
 
 
-### HTML
+ HTML
 * And of course the project uses html to write the actual code. 
 I also used a gitignore file to put old files in that I didn't want to use.
+
+## Frameworks, Libraries & Programs Used
+* Hover.css -
+Hover.css was used on the Home button to underline the button when hovered over.
+* Google Fonts -
+Google fonts were used to import the 'Carter one' cursive font used on all pages.
+* Git -
+Git was used for version control by using the Gitpod terminal to commit to Git and Push to GitHub.
+* GitHub -
+GitHub is used to store the projects code after being pushed from Git.
+* Photoshop -
+Photoshop was used to obtain the images for the cards and background.
+* Balsamiq -
+Balsamiq was used to create the wireframes during the design process.
+
 
 ## Images 
 The project also uses images for backgrounds and card photos, both the front and back of the cards use images. Here are some photos of the welcome page and the game page.  
@@ -78,14 +94,6 @@ If a user wants to play the game to learn the words, they can:
 * When the pop up modal box appears the user can click the desired level of difficulty for the game.
 * Start to click the cards to match the cards together, one in English and one in Portuguese that have the same pictures. They will notice that if they click on a non-matching card, the cards will flip back over and if they click on two matching cards, the cards will stay turned up.
 * When the game has finished they can see how much time it took them to complete the game. They can click the ‘Restart’ Button to play again or exit the page.
-
-If a user wants to improve the time they can complete the game, they can:
-* Open the project page.
-* Click the ‘Let’s Go’ Button.
-* When the pop up modal box appears the user can click the desired level of difficulty for the game.
-* Click the ‘Start’ Button underneath the green number 60 which is the digital countdown timer.
-* Start to click the cards to match the cards together, one in English and one in Portuguese that have the same pictures. They will notice that if they click on a non-matching card, the cards will flip back over and if they click on two matching cards, the cards will stay turned up.
-* When the game has finished they can see how long it took them to match up all the cards. They can click the ‘Restart’ Button to play again or exit the page.
 
 
 
