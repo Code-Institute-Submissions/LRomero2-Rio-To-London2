@@ -574,7 +574,6 @@ animation-duration: 0.4s
   margin: auto;
   padding: 20px;
   width: 80%;
-  height:60%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 -webkit-animation-name: animatetop;
 -webkit-animation-duration: 0.4s;
@@ -1063,6 +1062,37 @@ button:hover {
     text-align: center;
   }
 
+  @media (max-width: 450px) {
+  .hard {
+    height:auto;
+  }
+}
+
+@media (max-width: 480px) {
+button {margin-bottom:5px;
+}
+}
+
+@media (max-width: 480px) {
+.level-button {
+    margin:auto;
+    width:100%;
+}
+}
+
+@media (max-width: 450px) {
+  #game-board {
+     margin-top:20px;
+     max-width:90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .hard .card {
+    width:80px;
+    height:80px;
+  }
+}
 
   .card {
     width: 78px;
