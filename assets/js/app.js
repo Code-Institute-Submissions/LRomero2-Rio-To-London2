@@ -115,9 +115,7 @@
       // Update move count
       moves++;
       $("#moves").text(moves);
-
-      checkStars();
-    } else return;
+    } 
 
     if (click1.name === click2.name) {
       foundMatch();
