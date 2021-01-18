@@ -268,15 +268,18 @@ background-repeat:no-repeat;
 
 .home-button {
  color: white;
+ border: black 12px;
   letter-spacing: 6px;
   font-family: 'Carter One', cursive;
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   text-decoration: none;
   font-size: 18px;
   top:0;
   left:0;
+  margin-top: 0;
   }
+  
  
  /*Imitated from freecodecamp.org Memory Game in Vanilla JavaScript*/
  .home-button a {
@@ -284,6 +287,8 @@ background-repeat:no-repeat;
   font-family: 'Carter One', cursive;
   font-size: 18px;
   color: white;
+  margin-top: 0;
+  overflow-x: hidden;
 }
 
 
@@ -888,15 +893,64 @@ button:hover {
 }
 
 @media (max-width: 880px) {
+  .welcome {
+    background:none;
+  }
+}
+
+@media (max-width: 880px) {
+  .bg {
+    background-image: url('../imgs/welcomepagebackground.jpg');
+    background-size: unset;
+  }
+}
+
+@media (max-width: 880px) {
+  #game-board{
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 880px) {
+.hard .card {
+  position: relative;
+  float: left;
+  margin: 3px;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+}
+}
+
+@media (max-width: 880px) {
+  h2 {
+    font-size:6em;
+  }
+}
+
+@media (max-width: 880px) {
+  .level-button {
+    width:100px;
+  }
+}
+
+@media (max-width: 880px) {
+  .hard {
+    max-width: 620px;
+    height: 800px;
+  }
+}
+/*
+@media (max-width: 880px) {
   .hard .card {
     width: 100px;
     height: 100px;
-  }
+  }}
 
-  .hard {
+ /* .hard {
     max-width: 660px;
   }
-}
+}*/
 
 @media (max-width: 800px) {
   .site-title {
