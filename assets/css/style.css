@@ -274,7 +274,7 @@ background-repeat:no-repeat;
   text-align: center;
   overflow-x: hidden;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 28px;
   top:0;
   left:0;
   margin-top: 0;
@@ -285,7 +285,7 @@ background-repeat:no-repeat;
  .home-button a {
   text-decoration: none;
   font-family: 'Carter One', cursive;
-  font-size: 18px;
+  font-size: 28px;
   color: white;
   margin-top: 0;
   overflow-x: hidden;
@@ -451,19 +451,20 @@ body {
   transform: rotateY(0);
 }
 
-/* footer */
-footer {
+/* navbar */
+navbar {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  height:30px;
 }
 
 .counter,
 .timer,
 .home-button{
   width: 33%;
-  height:29px;
+  height:30px;
   text-align: center;
 }
 
@@ -478,7 +479,14 @@ footer {
 }
 }
 
-
+@media (max-width: 800px) {
+.counter,
+.timer,
+.home-button {
+    height:30px;
+    font-size: 26px;
+  }
+}
 
 
 .info {
@@ -939,17 +947,7 @@ button:hover {
     height: 800px;
   }
 }
-/*
-@media (max-width: 880px) {
-  .hard .card {
-    width: 100px;
-    height: 100px;
-  }}
 
- /* .hard {
-    max-width: 660px;
-  }
-}*/
 
 @media (max-width: 800px) {
   .site-title {
@@ -1082,7 +1080,7 @@ button {margin-bottom:5px;
 
 @media (max-width: 450px) {
   #game-board {
-     margin-top:20px;
+     margin-top:130px;
      max-width:90%;
   }
 }
