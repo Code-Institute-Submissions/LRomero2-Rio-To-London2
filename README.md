@@ -89,8 +89,9 @@ The code passed the validator test.
 ## Javascript Validator Testing
 I have also thoroughly tested the javascript code using jasmine and a Javascript Validator https://esprima.org/demo/validate.html.
 Most of the testing for the Javascript was done manually as I tested each modal, card matches and time/move counters.
-There was an issue with the code and two lines caused the whole game to not function properly but I have now fixed that and everything is 
-working well.
+There was an issue with the code earlier on and two lines caused the whole game to not function properly but I have now fixed that and everything is 
+working well. The message displayed after entering the code into the validator is: Code is syntactically valid. So I'm happy with the working
+javascript now and am confident that it is all working as it should.
 ## Jasmine Testing
 I have followed the video tutorial on the code institute course for using Jasmine testing and have stored these files in the gitignore folder.
 ## Manual Testing
@@ -118,7 +119,7 @@ Here is an image of the screen upon completing the game.
 # Testing User Stories from User Experience (UX) Section
  ### As a First Time Visitor, I want to easily understand the purpose of the site.
 
-* When entering the site users can see a neat and simple layout. The navigation buttons are easy to locate and understand, one for the instructions and one to start the game.
+* When entering the site users will see a neat and simple layout. The navigation buttons are easy to locate and understand, one for the instructions and one to start the game.
 * The idea of the game is made clear in the instructions modal.
 * The user can then try the game and see if they like it.
 
