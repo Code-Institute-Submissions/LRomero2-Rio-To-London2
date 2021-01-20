@@ -122,6 +122,9 @@ Here is an image of the screen upon completing the game.
 * The idea of the game is made clear in the instructions modal.
 * The user can then try the game and see if they like it.
 
+### As a returning Visitor, I want to try a more difficult level of the game.
+* The user can click on the 'Let's Go' button and then choose the medium level which says '...Getting There' or hardest level that says 'Total Pro!'.
+
 ### As a returning Visitor, I want to see if I can improve my progress in completing the game.
 * The user can start the game as normal and throughout the game see how many moves they have used by checking the 'moves' counter above the card deck.
 * The user can then see how long it took them to finish the game. The well done modal will appear when they have matched all the cards together showing how long it took them to finish it.
