@@ -1,4 +1,6 @@
 # Rio to London Memory Game 
+![Image of Screenshot](https://browser-f9e2144c-02cf-4091-b680-a2977a219b3b.ws-eu03.gitpod.io/workspace/Rio-To-London/imgs/gamemobiledevicehomepage.jpg)
+
 I created this memory game to not just be a game for the memory but to help learn a basic sentence in Portuguese at the same time. This game can be expanded to learn thousands of sentences just by playing this simple game. 
 I arranged the cards with nice photos as well as words to make it look more attractive and added a countdown timer that can be started when the player is ready. 
 And a moves counter so that the player can see how many moves it took them to complete the game.
@@ -18,7 +20,7 @@ The game looks best on a desktop or laptop.
 
 ![Image of Wireframe](assets/imgs/wireframeforwelcomepageonsecondproject.png)
 
-
+This was the original Wireframe for the project on a desktop view and for a tablet view but it changed a little as I went through the project.
 ![Image of Wireframe](assets/wireframes/wireframe-for-second-project.png)
 
 # Features
@@ -86,11 +88,19 @@ To test the CSS I went to http://www.css-validator.org/, entered the CSS code in
 The code passed the validator test. 
 ## Javascript Validator Testing
 I have also thoroughly tested the javascript code using jasmine and a Javascript Validator https://esprima.org/demo/validate.html.
+Most of the testing for the Javascript was done manually as I tested each modal, card matches and time/move counters.
+There was an issue with the code and two lines caused the whole game to not function properly but I have now fixed that and everything is 
+working well.
 ## Jasmine Testing
 I have followed the video tutorial on the code institute course for using Jasmine testing and have stored these files in the gitignore folder.
 ## Manual Testing
 I have also manually tested all components of the project. All of the pages and features are working well with no bugs or problems. 
-I have tested the project thoroughly on a laptop and it looks good and works well and I have tested it on my tablet and mobile. This game works best on a desktop or tablet device.
+I have tested the project thoroughly on a laptop and it looks good and works well and I have tested it on my tablet and mobile. 
+The game worked best on a desktop device earlier on in the development process, however after more time on the project I have
+styled the game further and it actually looks best on a mobile or tablet device which is much better as most people would access 
+the game on their mobile device.
+As the game was not functional before, I spent extra time and care checking the game by playng it through over and over again on each level
+on my phone and tablet also. Overall I'm happy with the game and I think It's changed a lot for the better. 
 
 If a user wants to play the game to learn the words, they can:
 * Open the project page.
