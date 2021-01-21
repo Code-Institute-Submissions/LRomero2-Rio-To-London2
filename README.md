@@ -12,11 +12,22 @@ Each page makes the sentence a little more complex to show how easy it is to lea
 This is plenty for a beginner so I didn't make any other pages with different sentences for now. 
 This game is very simple so that the user can focus on learning the words. There is a timer made by using javascript 
 for those who want to see their progress in quickness playing the game.
-A User wanting to test the game can click on the instructions button to see how the game works. Then, they can simply 
-click the ‘Let’s Go’ button on the welcome page and start straight away. When they have completed the game they can restart the game to try and beat their lowest moves score last time or they can exit the game.
-Additionally they can return to the welcome page a try a different level.
-Here is the Wireframe sketch for my project idea. This is the Wireframe for the project on desktop and tablet view. 
-The game looks best on a desktop or laptop. 
+* As a First Time Visitor, I want to easily understand the purpose of the site and play the game.
+ A User wanting to test the game should be able to click on the instructions button to see how the game works.
+ Then, they could click the ‘Let’s Go’ button on the welcome page and start straight away. When they have completed the game they 
+ could restart the game to try and beat their lowest moves score last time or they can exit the game.
+ Additionally they could return to the welcome page a try a different level.
+* As a returning Visitor, I want to try a more difficult level of the game.
+ The user should be able to select the level of difficulty after clicking the start 'Let's Go' button. 
+* As a returning Visitor, I want to see if I can improve my progress in completing the game.
+ The user should be able to play the game in whichever difficulty level they want and then check how long it took them to complete the game
+ and how many moves it took them to finish the game. They could keep a mental note of their progress in time and moves and then compare 
+ that to the other occassions when they play the game.
+ 
+
+ Here is the Wireframe sketch for my project idea. This is the Wireframe for the project on desktop and tablet view. 
+ The game looks best on a tablet or mobile device. 
+
 
 ![Image of Wireframe](assets/imgs/wireframeforwelcomepageonsecondproject.png)
 
@@ -28,7 +39,7 @@ This was the original Wireframe for the project on a desktop view and for a tabl
 * Instruction box — This tells the user how to play the game and helps them to understand the idea behind the project.
 * Game Level Option — This allows the player to choose the difficulty level of the game.
 * Timer — This allows the user to practice getting faster at the game and to see their own progress. 
-* Restart button — This allows the user to start the game again quickly.
+* Home button — This allows the user to go back to the landing page of the project.
 * Pictures on Cards — This helps the memory of the user to remember the words they have learnt for a long term recall of the words. 
 
 Here are a few photos of the pop up modal boxes built into the game.
@@ -109,7 +120,9 @@ If a user wants to play the game to learn the words, they can:
 * Click the ‘Let’s Go’ Button.
 * When the pop up modal box appears the user can click the desired level of difficulty for the game.
 * Start to click the cards to match the cards together, one in English and one in Portuguese that have the same pictures. They will notice that if they click on a non-matching card, the cards will flip back over and if they click on two matching cards, the cards will stay turned up.
-* When the game has finished they can see how much time it took them to complete the game. They can click the ‘Restart’ Button to play again or exit the page.
+* When the game has finished they can see how much time it took them to complete the game. They can click the ‘Restart Game’ Button when the well done modal appears upon completion to play again or exit the page. 
+* When they are playing the game but wish to change to a different level, they can click the home button that will take them back to the landing page and then
+  start the game again and click the new level they want to play at.
 
 
 
@@ -119,16 +132,18 @@ Here is an image of the screen upon completing the game.
 # Testing User Stories from User Experience (UX) Section
  ### As a First Time Visitor, I want to easily understand the purpose of the site.
 
-* When entering the site users will see a neat and simple layout. The navigation buttons are easy to locate and understand, one for the instructions and one to start the game.
-* The idea of the game is made clear in the instructions modal.
+* When entering the site users will see a neat and simple layout. The navigation buttons are easy to locate and understand, 
+  one for the instructions and one to start the game. The 'Let's Go' button is the start button. After that they select the difficulty level
+  to start the game.
+* The idea of the game is made clear in the instructions modal that can be selected via the 'Instructions' button on the home page.
 * The user can then try the game and see if they like it.
 
 ### As a returning Visitor, I want to try a more difficult level of the game.
 * The user can click on the 'Let's Go' button and then choose the medium level which says '...Getting There' or hardest level that says 'Total Pro!'.
 
 ### As a returning Visitor, I want to see if I can improve my progress in completing the game.
-* The user can start the game as normal and throughout the game see how many moves they have used by checking the 'moves' counter above the card deck.
-* The user can then see how long it took them to finish the game. The well done modal will appear when they have matched all the cards together showing how long it took them to finish it.
+* The user can start the game as normal by clicking the 'Let's Go' button and throughout the game see how many moves they have used by checking the 'moves' counter above the card deck.
+* The user can then see how long it took them to finish the game. The well done modal will appear when they have matched all the cards together showing how long it took them to finish the game.
 
 
 # Deployment
